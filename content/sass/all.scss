@@ -36,10 +36,10 @@
 
 // Buttons
 //
-// Reusable elements that can be used across the site.
-// So far this just includes buttons.
+// Button styles can be applied to anything with the `.btn` class applied.
+// However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
 //
-// Styleguide 1.0
+// Styleguide 1
 @import "_buttons";
 
 // Forms
