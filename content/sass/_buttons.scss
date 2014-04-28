@@ -6,7 +6,7 @@
 // .disabled    - Disabled button. If you use `<button>` element, that is acceptable to add `disabled` attribute instead.
 //
 // Markup:
-// <a type="submit" class="btn btn--primary {$modifiers}">Button</a>
+// <a class="btn btn--primary {$modifiers}">Button</a>
 // <button type="submit" class="btn {$modifiers}">Button</button>
 //
 // Styleguide 1.1
@@ -15,7 +15,7 @@
 
 .btn {
 	@include border-radius;
-	background-color:$mid-grey-1;
+	background-color:$light-grey-3;
 	border:none;
 	color: $dark-grey-2;
 	cursor: pointer;
@@ -38,7 +38,7 @@
 	// Hover/focus state
 	&:hover,
 	&:focus {
-		background-color:darken($mid-grey-1, 10%);
+		background-color:darken($light-grey-3, 10%);
 		color: $dark-grey-3;
 		}
 	
@@ -53,8 +53,7 @@
 		background-color:darken($mid-grey-1, 20%);
 		color: $dark-grey-3;
 		}	
-		
-	
+
 	}
 	
 	
@@ -156,27 +155,32 @@
 
 // Warning appears are orange
 .btn--warning {
-	
+	background-color:$orange;
+	color:#fff;
 	}
 
 // Danger and error appear as red
 .btn--danger {
-	
+	background-color:$red;
+	color:#fff;
 	}
 	
 // Success appears as green
 .btn--success {
-	
+	background-color:$success-color;
+	color:#fff;
 	}
 	
 // Info appears as a neutral blue
 .btn--info {
-	
+	background-color:$light-blue;
+	color:#fff;
 	}
 	
 // Inverse appears as dark gray
 .btn--inverse {
-	
+	background-color:$dark-grey-1;
+	color:#fff;
 	}	
 	
 	
