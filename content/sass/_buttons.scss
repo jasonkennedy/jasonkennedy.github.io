@@ -198,25 +198,15 @@
 	
 
 
-
+// Button Groups
+//
+// Use the `.btn-group` class on a `<div>` element surrounding several `<a>` elements with class `.btn`.
+//
+// Markup:
+// <div class="btn-group"><a href="#" class="btn {$modifiers}">Link</a><a class="btn">Link</a><a class="btn">Link</a></div>
+//
+// Styleguide 1.4
 	
-	
-	
-.btn--secondary {
-	background-color:$light-grey-2;
-	
-	&:hover {
-		background-color:darken($light-grey-2,10%);
-		}
-		
-	&:active {
-		
-		}
-		
-	&:disabled {
-		
-		}
-	}
 	
 	
 .btn-group {
