@@ -1,0 +1,10 @@
+.list {
+	list-style-type:none;
+	}
+	
+.list--footer {
+	.list__link {
+		color:$light-grey-3;
+		font-size:rem(13px);
+		}
+	}

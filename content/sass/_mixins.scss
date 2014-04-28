@@ -1,0 +1,176 @@
+
+/*=VARIABLES - COLORS
+------------------------------------------------*/
+
+
+$primary-color:#ccc;
+
+$secondary-color:#666;
+
+$tertiary-color:#ddd;
+
+$alert-color:#8A1F03;
+
+$success-color:#4385F5;
+
+$red:#DC4437;
+
+$dark-blue:#0A2F73;
+
+$light-blue:#0A7BC3;
+
+$yellow:#FFDD00;
+
+$orange:#FF8A00;
+
+$grey:#4B4B4B;
+
+$blue-tint:#E0EDFE;
+
+$light-grey-1: #f2f2f2;
+
+$light-grey-2: #e6e6e6;
+
+$light-grey-3: #cccccc;
+
+$mid-grey-1: #b3b3b3;
+
+$mid-grey-2: #999999;
+
+$mid-grey-3: #808080;
+
+$dark-grey-1: #666666;
+
+$dark-grey-2: #4d4d4d;
+
+$dark-grey-3: #333333;
+
+$off-black:#1a1a1a;
+
+$off-white:#e7e6dd;
+
+
+/*=VARIABLES - FONTS
+------------------------------------------------*/
+$font-base: 16px;
+
+$font-base-line-height: 24px;
+
+$font-base-line-height-half: $font-base-line-height / 2;
+
+$font-base-percentage: (($font-base / 16px) * 100) + 0%;
+
+$max-width: 1200px;
+
+
+
+/*FUNCTIONS
+------------------------------------------------*/
+@function rem($target, $context: $font-base) {
+	@if $target == 0 { @return 0 }
+	@return $target / $context + 0rem;
+	}
+
+@function perc($width, $container-width: $max-width) {
+	@return percentage($width / $container-width);
+	}
+
+@function lh($amount: 1, $context: $font-base) {
+	@return rem($font-base-line-height * $amount, $context);
+	}
+
+
+
+/*=MIXINS 
+------------------------------------------------*/
+
+@mixin border-radius($radius: $radius) {
+	-moz-border-radius: ($radius);
+  	-webkit-border-radius: ($radius);
+  	-ms-border-radius: ($radius);
+  	border-radius: ($radius);
+	}
+	
+$radius:4px !default;
+	
+@mixin box-shadow($shadow: $shadow) {
+	-moz-box-shadow: ($shadow);
+  	-webkit-box-shadow: ($shadow);
+  	box-shadow: ($shadow);
+	}
+	
+	
+@mixin rotate($rotate: $rotate) {
+  -webkit-transform: rotate($rotate);  /* Chrome, Safari 3.1+ */
+     -moz-transform: rotate($rotate);  /* Firefox 3.5-15 */
+      -ms-transform: rotate($rotate);  /* IE 9 */
+       -o-transform: rotate($rotate);  /* Opera 10.50-12.00 */
+          transform: rotate($rotate);  /* Firefox 16+, IE 10+, Opera 12.10+ */
+	}
+	
+$rotate: 7.5deg !default;
+
+$shadow: 1px 1px 1px 0px !default;
+	
+@mixin border-box {
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	}
+	
+@mixin transitions {	
+	-webkit-transition: all 0.15s ease-in-out;
+	-moz-transition: all 0.15s ease-in-out;
+	-o-transition: all 0.215s ease-in-out;
+	-ms-transition: all 0.15s ease-in-out;
+	transition: all 0.15s ease-in-out;
+	}
+	
+@mixin linear-gradient($fromColor, $toColor) {
+	background-color: $toColor; /* Fallback Color */
+	background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+	background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, $fromColor, $toColor);
+	
+	}
+	
+	
+// Hide from both screenreaders and browsers: h5bp.com/u
+@mixin hidden {
+	display: none !important;
+	visibility: hidden;
+	}
+
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+@mixin visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	}
+
+@mixin opacity ( $value: 0.5 ) {
+	opacity: $value;
+	zoom: 1;
+	}
+
+
+$font-family: Arial, Helvetica, "Lucida Grande", sans-serif;	
+
+$primary-font:standard_liferegular, Arial, Helvetica, "Lucida Grande", sans-serif;
+
+$primary-font-bold:standard_lifebold, Arial, Helvetica, "Lucida Grande", sans-serif;
+
+$primary-font-italic:standard_lifeitalic, Arial, Helvetica, "Lucida Grande", sans-serif;
+	
+$primary-font-bold-italic:standard_lifebold_italic, Arial, Helvetica, "Lucida Grande", sans-serif;
+
+$secondary-font: georgia, serif;		

@@ -1,0 +1,19 @@
+/* Accordion ---------------------- */
+
+.accordionTrigger {
+	margin:0 0 lh(.33) 0;
+	padding-right:lh(2);
+	position:relative;
+	&:hover, &.active {
+		cursor:pointer;
+		}
+	i {
+		position:absolute;
+		right:lh(.33);
+		top:lh(.3);
+		}
+	}
+
+.accordionContainer {
+	margin:lh(1) 0 0 0;
+	}

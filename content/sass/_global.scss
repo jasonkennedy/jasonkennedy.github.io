@@ -1,0 +1,81 @@
+body {
+	color:$grey;
+	font-family:$font-family;
+	font-size:$font-base;
+	line-height:$font-base-line-height;
+	text-rendering: optimizeLegibility;
+	&:after {
+		content: 'small';
+		display: none;
+		@include old-ie {
+			content: none;
+			}
+		}
+
+	@include respond-min(48em) {
+		&:after {
+			content: 'medium';
+			display: none;
+			@include old-ie {
+				content: none;
+				}
+			}
+		}
+	
+	@include respond-min(60em) {
+		&:after {
+			content: 'large';
+			display: none;
+			@include old-ie {
+				content: none;
+				}
+			}
+		}
+	}
+
+	
+/* Default transitions */
+.lister a,
+.nav-secondary a,
+.nav-tertiary a  {
+	@include transitions;
+	}
+	
+/* Default border radius */
+
+	
+/* Clearfixes */
+.clear, .cf {
+	@include clearfix();
+	}
+	
+.content,
+.lister a,
+.lister li,
+.lister-definitions,
+.nav-primary,
+.nav-primary ul,
+.nav-tertiary,
+.nav-tertiary ul,
+.panel,
+.rslides,
+.rslides_tabs {
+	@include clearfix();
+	}
+
+@include respond-min(48em) {
+	.panel-hero,
+	.wrap {
+		@include clearfix();
+		}
+	}
+
+@include respond-min(60em) {
+	.article,
+	.content,
+	.nav-primary > ul,
+	.panel-search {
+		@include clearfix();
+		}
+	}
+

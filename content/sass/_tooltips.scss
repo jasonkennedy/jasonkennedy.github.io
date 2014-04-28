@@ -1,0 +1,86 @@
+
+/* Tooltips ---------------------- */
+.has-tip { border-bottom: dotted 1px #cccccc; cursor: help; font-weight: bold; color: #333333; }
+.has-tip:hover { border-bottom: dotted 1px #196177; color: #2ba6cb; }
+
+.tooltip { 
+	display: none; 
+	background: black; 
+	background: rgba(0, 0, 0, 0.85); 
+	position: absolute; 
+	color: white; 
+	font-size: rem(12px); 
+	padding: lh(.33); 
+	line-height: normal;
+	z-index: 999; 
+	}
+	
+.tooltip > .nub { 
+	border: solid 5px; 
+	border-color: transparent transparent black transparent; 
+	border-color: transparent transparent rgba(0, 0, 0, 0.85) transparent; 
+	display: block; 
+	height: 0; 
+	left: 10px; 
+	position: absolute; 
+	top: -10px; 
+	width: 0;
+	}
+
+.tooltip.tip-override > .nub { 
+	border-color: transparent transparent black transparent !important; 
+	border-color: transparent transparent rgba(0, 0, 0, 0.85) transparent !important; 
+	top: -10px !important;
+	}
+	
+.tooltip.tip-top > .nub { 
+	border-color: black transparent transparent transparent; 
+	border-color: rgba(0, 0, 0, 0.85) transparent transparent transparent; 
+	top: -10px; 
+	left: 10px;
+	}
+	
+.tooltip.opened { 
+	color: #2ba6cb !important; 
+	border-bottom: dotted 1px #196177 !important;
+	}
+
+.tap-to-close { display: block; font-size: rem(10px); color: #888888; font-weight: normal; }
+
+
+@media only screen and (max-width: 767px) { 
+	.tooltip { 
+		font-size: rem(14px); 
+		float:none;
+		line-height: 1.4;
+		padding: 7px 10px 9px 10px; 
+		left: 50% !important; 
+		max-width: 85% !important; 
+		width: auto !important; 
+		margin-left: -42.5%;
+		}
+		
+	.tooltip > .nub, 
+	.tooltip.top > .nub { 
+		border-color: transparent transparent black transparent;
+		border-color: transparent transparent rgba(0, 0, 0, 0.85) transparent;
+		top: -12px; 
+		left: auto !important;
+		right: 6%!important
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

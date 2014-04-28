@@ -1,0 +1,47 @@
+/* table ---------------------- */
+
+.table, .article-content table {
+	margin:lh(1) 0;
+	width:100%;
+	@include respond-min(48em) {
+		line-height:lh(1);
+		}
+	th {
+		background-color:$grey;
+		color:$dark-grey-2;
+		font-weight:normal;
+		padding:lh(.5) 3%;
+		text-align:left;
+		vertical-align:bottom;
+		}
+	td {
+		border-bottom:1px solid #ddd;
+		padding:lh(.5) 3%;
+		text-align:left;
+		}
+		
+	tr:nth-child(even) td {
+		background-color: $light-grey-1;
+		}
+		
+	 tr:nth-child(odd) td {
+		 background-color: #FFF
+		 }
+	}
+	
+.table-admin {
+	border:1px solid $light-grey-3;
+	margin:lh(1) 0;
+	width:100%;
+	@include respond-min(48em) {
+		
+		}
+	th {
+	
+
+		}
+	td {
+		font-size:rem(15px);
+		}
+	}
+	

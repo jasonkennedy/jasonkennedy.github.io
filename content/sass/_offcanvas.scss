@@ -1,0 +1,328 @@
+@include respond-max(59.95em) {	
+
+	$background-color: #333;
+	$nav-off-canvas-width: 85%;
+	
+	body {
+		position: relative;
+		width: 100%;
+		}
+		
+
+	
+	.masthead .block,
+	.nav--primary .block {
+		position: relative;
+		margin: 0 auto;
+		padding: lh(.66) lh(1);
+		}
+		
+	.masthead .block {
+		padding:rem(52px) 0 0 0;
+		@include respond-min(48em) {	
+			padding-right:0;
+			}
+		}
+
+	.nav--primary__close-btn {
+		color:#fff;
+		display: block;
+		@include opacity(1);
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	
+			&:focus,
+			&:hover {
+				@include opacity(1);
+			}
+		}
+
+	.nav-btn {
+		display: block;
+	
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		
+			&:hover,
+			&:focus {
+				@include opacity(1);
+			}
+		}
+
+	.outer-wrap {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		}
+	
+	.inner-wrap {
+		position: relative;
+		width: 100%;
+		}
+
+	.nav--primary {
+		color: #fff;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		z-index: 200;
+		
+		.nav--primary__close-btn {
+			display: none;
+			}
+	
+		.block {
+			background: $background-color;
+			position: relative;
+			padding: rem(12px) rem(20px);
+			z-index: 2;
+			}
+
+		}
+		
+	.nav--primary__item {
+		display: block;
+
+		&.is-active {
+		.nav--primary__link {
+			color: #fff;
+			}
+		}	
+	
+	.nav--primary__list {
+		@include clearfix;
+		display: block;
+		}
+		
+	.nav--primary__link {
+		display: block;
+		color: #ccc;
+		font-weight: bold;
+		outline: none;
+
+		&:focus,
+		&:hover {
+			color: #fff;
+			/*background: rgba(255,255,255, 0.1);*/
+			background-color:$primary-color;
+			opacity:1;
+			}
+		}
+	
+	}
+
+// header[role="banner"] {
+	.masthead {
+		z-index: 100;
+		.nav-btn {
+			right:lh(.2);
+			position: absolute;
+			top:lh(.2);
+			z-index:999;
+			}
+			
+		}
+
+	.nav--primary {
+		padding-top: rem(72px);
+		position: absolute;
+		top: 0;
+		
+		&:not(:target) {
+			z-index: 1;
+			height: 0;
+			}
+	
+		&:target {
+			.nav--primary__close-btn {
+				display: block;
+				}
+			}
+	
+		.nav--primary__close-btn {
+			position: absolute;
+			top: rem(-60px);
+			right: rem(24px);
+			}
+	
+		.block {
+			position: relative;
+			padding: 0;
+			}
+	
+		li {
+			position: relative;
+			border-top: 1px solid rgba(255,255,255, 0.1);
+	
+			&:last-child {
+				border-bottom: 1px solid rgba(255,255,255, 0.1);
+				}
+	
+			&.active:after {
+				z-index: 50;
+				display: block;
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: rem(-0.5px);
+				margin-top: rem(-10px);
+				border-top: rem(10px) transparent solid;
+				border-bottom: rem(10px) transparent solid;
+				border-left: rem(10px) #fff solid;
+				}
+	
+			a {
+				padding: lh(.66) lh(1);
+				}
+				
+			}
+			
+		}
+	
+	
+		.js-ready {
+	
+			.nav--primary {
+				height: 100%;
+				width: $nav-off-canvas-width;
+				background: $background-color;
+
+				.block {
+					background: transparent;
+					}
+	
+				.nav--primary__close-btn {
+					display: block;
+					@include opacity(0.7);
+	
+					&:focus,
+					&:hover {
+						@include opacity(1);
+					}
+				}
+			}
+		}
+	
+	
+	
+		.js-ready {
+	
+			.nav--primary {
+				right: (0 - $nav-off-canvas-width);
+				}
+	
+			.inner-wrap {
+				right: 0;
+				}
+			}
+	
+		.js-nav {
+	
+			.inner-wrap {
+				right: $nav-off-canvas-width;
+				}
+			
+			}
+	
+	  .csstransforms3d.csstransitions.js-ready .nav--primary {
+			right: 0;
+			-webkit-transform: translate3d(100%, 0, 0);
+			-moz-transform: translate3d(100%, 0, 0);
+			-ms-transform: translate3d(100%, 0, 0);
+			-o-transform: translate3d(100%, 0, 0);
+			transform: translate3d(100%, 0, 0);
+			-webkit-backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+			-ms-backface-visibility: hidden;
+			-o-backface-visibility: hidden;
+			backface-visibility: hidden;
+		  }
+		  
+		  .csstransforms3d.csstransitions.js-ready .inner-wrap {
+			right: 0 !important;
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			-ms-transform: translate3d(0, 0, 0);
+			-o-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			-webkit-transition: -webkit-transform 500ms ease;
+			-moz-transition: -moz-transform 500ms ease;
+			-o-transition: -o-transform 500ms ease;
+			transition: transform 500ms ease;
+			-webkit-backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+			-ms-backface-visibility: hidden;
+			-o-backface-visibility: hidden;
+			backface-visibility: hidden;
+		  }
+		
+		  .csstransforms3d.csstransitions.js-nav .inner-wrap {
+			-webkit-transform: translate3d(-$nav-off-canvas-width, 0, 0) scale3d(1, 1, 1);
+			-moz-transform: translate3d(-$nav-off-canvas-width, 0, 0) scale3d(1, 1, 1);
+			-ms-transform: translate3d(-$nav-off-canvas-width, 0, 0) scale3d(1, 1, 1);
+			-o-transform: translate3d(-$nav-off-canvas-width, 0, 0) scale3d(1, 1, 1);
+			transform: translate3d(-$nav-off-canvas-width, 0, 0) scale3d(1, 1, 1);
+		  }
+		
+		  .csstransforms3d.csstransitions.js-ready .nav--primary .block {
+			filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+			opacity: 0.7;
+			-webkit-transition: opacity 300ms 100ms, -webkit-transform 500ms ease;
+			-webkit-transition-delay: ease, 0s;
+			-moz-transition: opacity 300ms 100ms ease, -moz-transform 500ms ease;
+			-o-transition: opacity 300ms 100ms ease, -o-transform 500ms ease;
+			transition: opacity 300ms 100ms ease, transform 500ms ease;
+			-webkit-transform: translate3d(-$nav-off-canvas-width, 0, 0) scale3d(0.9, 0.9, 0.9);
+			-moz-transform: translate3d(-$nav-off-canvas-width, 0, 0) scale3d(0.9, 0.9, 0.9);
+			-ms-transform: translate3d(-$nav-off-canvas-width, 0, 0) scale3d(0.9, 0.9, 0.9);
+			-o-transform: translate3d(-$nav-off-canvas-width, 0, 0) scale3d(0.9, 0.9, 0.9);
+			transform: translate3d(-$nav-off-canvas-width, 0, 0) scale3d(0.9, 0.9, 0.9);
+			-webkit-transform-origin: 50% 0%;
+			-moz-transform-origin: 50% 0%;
+			-ms-transform-origin: 50% 0%;
+			-o-transform-origin: 50% 0%;
+			transform-origin: 50% 0%;
+		  }
+		
+		  .csstransforms3d.csstransitions.js-nav .nav--primary .block {
+			filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+			opacity: 1;
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			-ms-transform: translate3d(0, 0, 0);
+			-o-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		  }
+			
+	
+	
+	}
+	
+	
+	
+@include respond-min(60em) {
+	.masthead {
+		.nav-btn {
+			@include visuallyhidden;
+			}
+		}
+	
+	.nav--primary {
+		.nav--primary__close-btn {
+			@include visuallyhidden;
+			}
+	
+		.block-title {
+			@include visuallyhidden;
+			}
+
+		}
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+
+

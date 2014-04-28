@@ -1,0 +1,159 @@
+.article-content {	
+	padding-bottom:lh(1);
+
+	@include respond-min(60em) {
+		overflow:visible;
+		padding-top:lh(1);
+		}
+
+		
+	@include old-ie {
+		width:620px;
+		}
+		
+	h2 { 
+		color:#333;
+		font-size:3.2rem;
+		font-weight:normal;
+		}
+	
+	h3 { 
+		color:#333;
+		font-size:2.588rem;
+		font-weight:normal;
+		}
+	
+	h4 { 
+		color:#333;
+		font-size:1.97rem;
+		}
+		
+	p, ul, ol {
+		color:#444;
+		font-family:$font-family;
+		font-size:rem(18px);
+		line-height:lh(1);
+		margin-bottom:lh(.75);
+		}
+		
+	ul li, ol li{
+		margin-bottom:lh(.25);
+		}
+		
+		
+	.pull-center {
+		float:none;
+		@include respond-min(48em) {
+			text-align:center;
+			}
+		}
+		
+	.pull-left {
+		float:none;
+		@include respond-min(48em) {
+			float:left;
+			margin:0 lh(1) lh(1) 0;
+			width:45%;
+			}
+		}
+		
+	.pull-right {
+		float:none;
+		@include respond-min(48em) {
+			float:right;
+			margin:0 0 lh(1) lh(1);
+			width:45%;
+			}
+		}
+
+	 table {
+		font-size:rem(15px);
+		@include respond-min(75em) {
+			margin-left: -11%;
+			margin-right: -34%;
+			width:145%;
+			
+			}
+		}
+		
+	figure {
+		margin:lh() 0;
+		@include respond-min(60em) {
+			margin-left: -10%;
+			margin-right: -34%;
+			position:relative;
+			width:145%;
+			
+			}
+		}
+		
+	.figcaption {
+		@include respond-min(60em) {
+			color:$mid-grey-2;
+			font-size:rem(13px);
+			margin:lh() -5%;
+			position:relative;
+			}
+		}
+		
+		
+	.audio-caption {
+		background-color:#fff;
+		color:#666;
+		padding:lh(.33) lh(.33) lh(1) lh(.33);
+		position:relative;
+		}
+	
+	.audio-caption-title {
+		font-size:rem(21px);
+		margin:0;
+		}
+	
+	.audio-caption .icon {
+		background-color:#fff;
+		color:$primary-color;
+		font-size:rem(22px);
+		height:32px;
+		left:0;
+		line-height:32px;
+		position:absolute;
+		text-align:center;
+		top:-32px;
+		width:32px;
+		}
+
+	}
+
+.article-tools {
+	@include respond-min(48em) {
+		position:absolute;
+		right:0;
+		top:0;
+		}
+	}
+	
+.panel-article {
+	@include old-ie {
+		width:820px;
+		}
+		
+	}
+	
+.article-related {	
+	@include respond-min(75em) {
+		
+		}
+	@include old-ie {
+		width:620px;
+		.form legend {
+			display:block;
+			overflow:hidden !important;
+			width:570px !important;
+			}
+		
+		}
+	}
+	
+	
+	
+	

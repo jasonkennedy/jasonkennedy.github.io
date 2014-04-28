@@ -1,0 +1,75 @@
+.tabs { 
+	border-bottom: solid 1px $light-grey-2;
+	display: block; 
+	height:36px;
+	list-style: none;
+	padding: 0 lh(.33); 
+	margin-bottom: 20px; 
+	}
+
+.tabs dd { 
+	display: block; 
+	float: left; 
+	margin: 0; 
+	padding: 0; 
+	}
+
+.tabs dd a { 
+	background-color:$light-grey-1;
+	border-left: 1px solid $light-grey-1;
+	border-top: 2px solid $light-grey-1;
+	color:$mid-grey-3;
+	display: block; 
+	font-size: rem(12px);
+	height:36px;
+	line-height:36px;
+	padding: 0 lh(.66);
+	}
+
+.tabs dd a:hover  { 
+	background-color:$light-grey-2;
+	border-left: 1px solid $light-grey-2;
+	border-top: 2px solid $light-grey-2;
+	color:$dark-grey-3;
+	cursor: pointer; 
+	}
+	
+.tabs dd.active a  { 
+	background-color:#fff;
+	border-left: 1px solid $light-grey-2;
+	border-right: 1px solid $light-grey-2;
+	border-top: 2px solid $primary-color; 
+	color:$dark-grey-3;
+	cursor: default; 
+	text-shadow:none;
+	}
+
+.tabs dd:first-child { 
+	margin-left: 0; 
+	}
+
+.tabs.two-up dd {
+	text-align:center;
+	width:50%;
+	}
+
+ul.tabs-content { 
+	display: block; 
+	margin: 0 0 20px 0;
+	padding: 0; 
+	}
+
+ul.tabs-content > li { 
+	display: none; 
+	}
+
+ul.tabs-content > li.active { 
+	display: block; 
+	margin:0;
+	padding:0;
+	}
+
+.no-js ul.tabs-content > li { 
+	display: block;
+	}
+	
