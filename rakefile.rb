@@ -7,8 +7,11 @@ COMMIT_MSG = "Updates styleguide"
 task :default => ['kss:styleguidequick']
 
 namespace :kss do
+	STDOUT.sync = true
 	task :styleguide => ['bundler:update', 'sass:compile'] do 
 		commit_data = get_commit_hash_and_date
+		puts commit_data[0]
+		puts COMMIT_MSG
 		if commit_data[0] != COMMIT_MSG
 			system "npm install kss"
 			Rake::Task['kss:styleguidequick'].invoke()
