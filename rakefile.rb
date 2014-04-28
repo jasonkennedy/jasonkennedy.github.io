@@ -9,10 +9,10 @@ task :default => ['kss:styleguidequick']
 namespace :kss do
 	STDOUT.sync = true
 	task :styleguide => ['bundler:update', 'sass:compile'] do 
-		commit_data = get_commit_hash_and_date
-		puts commit_data[0]
+		commit = get_commit_hash_and_date
+		puts commit
 		puts COMMIT_MSG
-		if commit_data[0] != COMMIT_MSG
+		if commit != COMMIT_MSG
 			system "npm install kss"
 			Rake::Task['kss:styleguidequick'].invoke()
 			system "git add -A"
@@ -41,11 +41,8 @@ end
 def get_commit_hash_and_date
 	begin
 		commit = `git log -1 --pretty=format:%H`
-		git_date = `git log -1 --date=iso --pretty=format:%ad`
-		commit_date = DateTime.parse( git_date ).strftime("%Y-%m-%d %H%M%S")
 	rescue
 		commit = "git unavailable"
 	end
-
-	[commit, commit_date]
+	commit
 end
