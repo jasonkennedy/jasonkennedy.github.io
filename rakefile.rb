@@ -9,6 +9,7 @@ namespace :kss do
 	task :styleguide => ['bundler:update', 'sass:compile'] do 
 		system "npm install kss"
 		Rake::Task['kss:styleguidequick'].invoke()
+		system "git add -A"
 		system "git commit -am \"Updates styleguide\""
 		
 	end
