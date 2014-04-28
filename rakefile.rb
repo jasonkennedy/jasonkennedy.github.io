@@ -2,7 +2,7 @@ COMPASS_PATH = "content"
 SASS_PATH = "content/sass"
 CSS_PATH = "content/css/all.css"
 KSS_TEMPLATE_PATH = "styleguide-template/"
-COMMIT_MSG = "Updates styleguide"
+COMMIT_MSG = "Styleguide regenerated"
 
 task :default => ['kss:styleguidequick']
 
@@ -40,7 +40,7 @@ end
 
 def get_commit_hash_and_date
 	begin
-		commit = `git log -1 --pretty=format:%H`
+		commit = `git log -1 --pretty=format:%s`
 	rescue
 		commit = "git unavailable"
 	end
