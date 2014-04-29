@@ -7,9 +7,8 @@ task :default => ['kss:styleguide']
 
 namespace :kss do
 	task :init => ['bundler:update'] do 
-			system "npm install kss"
-			Rake::Task['kss:styleguide'].invoke()
-		end
+		system "npm install kss"
+		Rake::Task['kss:styleguide'].invoke()
 	end
 	
 	task :styleguide => ['sass:compile'] do 
