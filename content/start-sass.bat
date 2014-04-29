@@ -1,0 +1,1 @@
+sass --watch --style expanded --debug-info --line-numbers -E utf-8 sass:css
