@@ -67,6 +67,12 @@
       // Ensure code blocks are highlighted properly...
       $('pre>code').addClass('prettyprint');
       prettyPrint();
+	  $('.atv').each(function() {
+		$(this).text(function(index, text){
+			return text.replace(' {$modifiers}', '');
+		}
+		);
+	  });
 
     });
   </script>
