@@ -1,28 +1,19 @@
 COMPASS_PATH = "content"
 SASS_PATH = "content/sass"
-CSS_PATH = "content/css/all.css"
+CSS_FILE_PATH = "content/css/all.css"
 KSS_TEMPLATE_PATH = "styleguide-template/"
-COMMIT_MSG = "Styleguide regenerated"
 
-task :default => ['kss:styleguidequick']
+task :default => ['kss:styleguide']
 
 namespace :kss do
-	STDOUT.sync = true
-	task :styleguide => ['bundler:update', 'sass:compile'] do 
-		commit = get_commit_hash_and_date
-		puts commit
-		puts COMMIT_MSG
-		if commit != COMMIT_MSG
+	task :init => ['bundler:update'] do 
 			system "npm install kss"
-			Rake::Task['kss:styleguidequick'].invoke()
-			system "git add -A"
-			system "git commit -am \"#{COMMIT_MSG}\""
-			system "git push origin master"
+			Rake::Task['kss:styleguide'].invoke()
 		end
 	end
 	
-	task :styleguidequick do 
-		system "kss-node #{SASS_PATH}  --template #{KSS_TEMPLATE_PATH} --style #{CSS_PATH}"
+	task :styleguide => ['sass:compile'] do 
+		system "kss-node #{SASS_PATH}  --template #{KSS_TEMPLATE_PATH} --style #{CSS_FILE_PATH}"
 	end
 end
 
@@ -36,13 +27,4 @@ namespace :bundler do
 	task :update do
 		system "bundle update"
 	end
-end
-
-def get_commit_hash_and_date
-	begin
-		commit = `git log -1 --pretty=format:%s`
-	rescue
-		commit = "git unavailable"
-	end
-	commit
 end
