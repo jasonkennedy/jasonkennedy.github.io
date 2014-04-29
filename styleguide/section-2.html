@@ -50,14 +50,14 @@
       <div class="kss-content">
         <article class="kss-article">
           
-          
+          7
           <section id="section-2" class="kss-section kss-depth-1">
             <h1 class="kss-title"><span class="kss-ref">2</span> Tables</h1>
             
             
             
           </section>
-          
+          7
           <section id="section-2.1" class="kss-section kss-depth-2">
             <h1 class="kss-title"><span class="kss-ref">2.1</span> Tables</h1>
             
@@ -69,7 +69,7 @@
             
             
           </section>
-          
+          7
           <section id="section-2.2" class="kss-section kss-depth-2">
             <h1 class="kss-title"><span class="kss-ref">2.2</span> Table styles</h1>
             
@@ -328,19 +328,22 @@
     </div>
     <script src="public/kss.js"></script>
     <script src="public/jquery-1.9.1.min.js"></script>
-    <!--[if gt IE 8]><!-->
-    <script src="public/rainbow.min.js"></script>
-    <!--<![endif]-->
-    <script src="public/main.js"></script>
+	<script src="public/storm.js"></script>
 	<script>
 		$(function() {
-			$('pre .value').each(function() {
-				$(this).text(function(index, text){
-					return text.replace(' {$modifiers}', '');
-				}
-				);
+			$('pre .value').waitUntilExists(function() {
+				$('pre .value').each(function() {
+					$(this).text(function(index, text){
+						return text.replace(' {$modifiers}', '');
+					}
+					);
+				});
 			});
 		});
 	</script>
+	<script src="public/main.js"></script>
+    <!--[if gt IE 8]><!-->
+    <script src="public/rainbow.min.js"></script>
+    <!--<![endif]-->
   </body>
 </html>

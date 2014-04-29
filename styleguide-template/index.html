@@ -47,7 +47,7 @@
             {{html overview}}
           </section>
           {{else}}
-          {{#eachSection rootNumber}}
+          {{#eachSection rootNumber}}7
           <section id="section-{{reference}}" class="kss-section kss-depth-{{refDepth}}">
             <h1 class="kss-title"><span class="kss-ref">{{reference}}</span> {{header}}</h1>
             {{#ifAny markup modifiers}}
@@ -97,19 +97,22 @@
     </div>
     <script src="public/kss.js"></script>
     <script src="public/jquery-1.9.1.min.js"></script>
-    <!--[if gt IE 8]><!-->
-    <script src="public/rainbow.min.js"></script>
-    <!--<![endif]-->
-    <script src="public/main.js"></script>
+	<script src="public/storm.js"></script>
 	<script>
 		$(function() {
-			$('pre .value').each(function() {
-				$(this).text(function(index, text){
-					return text.replace(' {$modifiers}', '');
-				}
-				);
+			$('pre .value').waitUntilExists(function() {
+				$('pre .value').each(function() {
+					$(this).text(function(index, text){
+						return text.replace(' {$modifiers}', '');
+					}
+					);
+				});
 			});
 		});
 	</script>
+	<script src="public/main.js"></script>
+    <!--[if gt IE 8]><!-->
+    <script src="public/rainbow.min.js"></script>
+    <!--<![endif]-->
   </body>
 </html>

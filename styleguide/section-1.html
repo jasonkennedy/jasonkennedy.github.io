@@ -62,7 +62,7 @@
       <div class="kss-content">
         <article class="kss-article">
           
-          
+          7
           <section id="section-1" class="kss-section kss-depth-1">
             <h1 class="kss-title"><span class="kss-ref">1</span> Buttons</h1>
             
@@ -75,7 +75,7 @@ However, typically you&apos;ll want to apply these to only <code>&lt;a&gt;</code
             
             
           </section>
-          
+          7
           <section id="section-1.1" class="kss-section kss-depth-2">
             <h1 class="kss-title"><span class="kss-ref">1.1</span> Base styles &amp; states</h1>
             
@@ -137,7 +137,7 @@ However, typically you&apos;ll want to apply these to only <code>&lt;a&gt;</code
             </div>
             
           </section>
-          
+          7
           <section id="section-1.2" class="kss-section kss-depth-2">
             <h1 class="kss-title"><span class="kss-ref">1.2</span> Sizing</h1>
             
@@ -219,7 +219,7 @@ Add <code>.btn--large</code>, <code>.btn--small</code>, or <code>.btn--mini</cod
             </div>
             
           </section>
-          
+          7
           <section id="section-1.3" class="kss-section kss-depth-2">
             <h1 class="kss-title"><span class="kss-ref">1.3</span> Skins</h1>
             
@@ -344,7 +344,7 @@ Add <code>.btn--large</code>, <code>.btn--small</code>, or <code>.btn--mini</cod
             </div>
             
           </section>
-          
+          7
           <section id="section-1.4" class="kss-section kss-depth-2">
             <h1 class="kss-title"><span class="kss-ref">1.4</span> Button Groups</h1>
             
@@ -375,7 +375,7 @@ Add <code>.btn--large</code>, <code>.btn--small</code>, or <code>.btn--mini</cod
             </div>
             
           </section>
-          
+          7
           <section id="section-1.5" class="kss-section kss-depth-2">
             <h1 class="kss-title"><span class="kss-ref">1.5</span> Forms</h1>
             
@@ -398,19 +398,22 @@ elements.</p>
     </div>
     <script src="public/kss.js"></script>
     <script src="public/jquery-1.9.1.min.js"></script>
-    <!--[if gt IE 8]><!-->
-    <script src="public/rainbow.min.js"></script>
-    <!--<![endif]-->
-    <script src="public/main.js"></script>
+	<script src="public/storm.js"></script>
 	<script>
 		$(function() {
-			$('pre .value').each(function() {
-				$(this).text(function(index, text){
-					return text.replace(' {$modifiers}', '');
-				}
-				);
+			$('pre .value').waitUntilExists(function() {
+				$('pre .value').each(function() {
+					$(this).text(function(index, text){
+						return text.replace(' {$modifiers}', '');
+					}
+					);
+				});
 			});
 		});
 	</script>
+	<script src="public/main.js"></script>
+    <!--[if gt IE 8]><!-->
+    <script src="public/rainbow.min.js"></script>
+    <!--<![endif]-->
   </body>
 </html>
