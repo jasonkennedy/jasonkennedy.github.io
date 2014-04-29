@@ -1,28 +1,35 @@
+require 'listen'
+
 COMPASS_PATH = "content"
 SASS_PATH = "content/sass"
-CSS_PATH = "content/css/all.css"
+CSS_FILE_PATH = "content/css/all.css"
 KSS_TEMPLATE_PATH = "styleguide-template/"
-COMMIT_MSG = "Styleguide regenerated"
 
-task :default => ['kss:styleguidequick']
+task :default => ['kss:styleguide']
 
 namespace :kss do
-	STDOUT.sync = true
-	task :styleguide => ['bundler:update', 'sass:compile'] do 
-		commit = get_commit_hash_and_date
-		puts commit
-		puts COMMIT_MSG
-		if commit != COMMIT_MSG
-			system "npm install kss"
-			Rake::Task['kss:styleguidequick'].invoke()
-			system "git add -A"
-			system "git commit -am \"#{COMMIT_MSG}\""
-			system "git push origin master"
-		end
+	task :init => ['bundler:update'] do 
+		system "npm install kss"
+		Rake::Task['kss:styleguide'].invoke()
 	end
 	
-	task :styleguidequick do 
-		system "kss-node #{SASS_PATH}  --template #{KSS_TEMPLATE_PATH} --style #{CSS_PATH}"
+	task :styleguide => ['sass:compile'] do 
+		system "kss-node #{SASS_PATH}  --template #{KSS_TEMPLATE_PATH} --style #{CSS_FILE_PATH}"
+	end
+	
+	task :watch do
+		puts "Listening for changes to files in #{SASS_PATH}..."
+		callback = Proc.new do |modified, added, removed|
+			puts "Changes detected!"
+			puts "Modified: #{modified}"
+			puts "Added: #{added}"
+			puts "Removed: #{removed}"
+			puts "Running kss styleguide generation"
+			system "kss-node #{SASS_PATH}  --template #{KSS_TEMPLATE_PATH} --style #{CSS_FILE_PATH}"
+		end
+		listener = Listen.to(SASS_PATH, :force_polling => true, &callback)
+		listener.start # not blocking
+		sleep
 	end
 end
 
@@ -36,13 +43,4 @@ namespace :bundler do
 	task :update do
 		system "bundle update"
 	end
-end
-
-def get_commit_hash_and_date
-	begin
-		commit = `git log -1 --pretty=format:%s`
-	rescue
-		commit = "git unavailable"
-	end
-	commit
 end
