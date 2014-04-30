@@ -1,0 +1,46 @@
+// Options
+//
+// You can add more classes to your alert box to change its appearance - `.alert--info`, `.alert--success`, `.alert--warning `, or `.alert--danger`
+//
+// .alert--info      - Used as an alternative to the default styles.
+// .alert--success   - Indicates a successful or positive action.
+// .alert--warning   - Indicates caution should be taken with this action.
+// .alert--danger    - Indicates a dangerous or potentially negative action.
+//
+// Markup:
+// <div class="alert {$modifiers}">This is an alert message</div>
+//
+// Styleguide 2.1
+
+// Core
+
+.alert {
+    background-color:$light-grey-1;
+	border:1px solid darken($light-grey-1, 20%);
+	color:$secondary-color;
+	display:block;
+	margin:lh(1) 0;
+	padding:lh(1) lh(1.66);
+	text-align:center;
+	}
+	
+
+.alert--info {
+    background-color:$light-grey-2;
+	border:1px solid darken($light-grey-2, 20%);
+	}
+	
+.alert--success {
+    background-color:$light-grey-3;
+	border:1px solid darken($light-grey-3, 20%);
+	}
+	
+.alert--warning {
+    background-color:$mid-grey-2;
+	border:1px solid darken($mid-grey-2, 20%);
+	}
+	
+.alert--danger {
+    background-color:$mid-grey-3;
+	border:1px solid darken($mid-grey-3, 20%);
+	}

@@ -62,10 +62,10 @@
 // Fancy larger or smaller buttons?
 // Add `.btn--large`, `.btn--small`, or `.btn--mini` for additional sizes.
 //
-// .btn--large  - Large button.
-// .btn--smalll - Small button.
-// .btn--mini   - Mini button.
-// .btn--block  - Block level button.
+// .btn--large - Large button.
+// .btn--small - Small button.
+// .btn--mini - Mini button.
+// .btn--block - Block level button.
 //
 // Markup:
 // <button type="submit" class="btn btn-primary {$modifiers}">Button</button>
@@ -217,3 +217,5 @@
 .btn-group > *:first-child {
     margin-left: 0;
 	}
+	
+	
