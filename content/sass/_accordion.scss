@@ -1,4 +1,18 @@
-/* Accordion ---------------------- */
+// Base styles & states
+//
+// :hover       - Hover state.
+// :active      - Active state.
+// .disabled    - Disabled button. If you use `<button>` element, that is acceptable to add `disabled` attribute instead.
+//
+// Markup:
+// <div>
+// 	<h3 class="cf js-toggle alpha border-top border-primary-color primary-font js-toggle-active">Accordion</h3>
+//  <div class="js-toggle-content"
+//  	Accordion content
+//	</div>
+// </div>
+//
+// Styleguide 1.1
 
 .accordionTrigger {
 	margin:0 0 lh(.33) 0;

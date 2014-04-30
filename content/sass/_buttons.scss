@@ -5,12 +5,13 @@
 // .disabled    - Disabled button. If you use `<button>` element, that is acceptable to add `disabled` attribute instead.
 //
 // Markup:
-// <a class="btn btn-primary {$modifiers}">Button</a>
+// <a class="btn btn--primary {$modifiers}">Button</a>
 // <button type="submit" class="btn {$modifiers}">Button</button>
 //
-// Styleguide 1.1
+// Styleguide 4.1
 
 // Core
+
 
 .btn {
 	@include border-radius;
@@ -70,7 +71,7 @@
 // <button type="submit" class="btn btn-primary {$modifiers}">Button</button>
 // <button type="submit" class="btn {$modifiers}">Button</button>
 //
-// Styleguide 1.2
+// Styleguide 4.2
 
 // Large
 .btn--large {
@@ -107,7 +108,6 @@
 	}
 	
 	
-
 // Skins
 //
 // Use the `.btn` class on an `<a>`, `<button>`, or `<input>` element.
@@ -125,7 +125,7 @@
 // <input type="submit" class="btn {$modifiers}" value="Input:submit" />
 // <input type="button" class="btn {$modifiers}" value="Input:button" />
 //
-// Styleguide 1.3
+// Styleguide 4.3
 
 
 // Set the backgrounds
@@ -137,14 +137,6 @@
 	&:hover {
 		background-color:darken($dark-grey-3, 10%);
 		color:#fff;
-		}
-		
-	&:active {
-		
-		}
-		
-	&:disabled {
-		
 		}
 		
 	}
@@ -179,20 +171,6 @@
 	color:#fff;
 	}	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-
 
 // Button Groups
 //
@@ -205,10 +183,8 @@
 //	<a class="btn">Link</a>
 //</div>
 //
-// Styleguide 1.4
-	
-	
-	
+// Styleguide 4.4
+		
 .btn-group {
     @include clearfix();
 	list-style: none outside none;
@@ -233,8 +209,7 @@
 
 	}
 	
-
-
+	
 .btn-group > * {
     float: left;
    	margin: 0 0 0 -1px;

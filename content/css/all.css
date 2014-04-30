@@ -2525,513 +2525,6 @@ pre {
   vertical-align: middle;
 }
 
-/*
- * jQuery FlexSlider v2.2.0
- * http://www.woothemes.com/flexslider/
- *
- * Copyright 2012 WooThemes
- * Free to use under the GPLv2 license.
- * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * Contributing author: Tyler Smith (@mbmufffin)
- */
-/* Browser Resets
-*********************************/
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\0000318}}
-.flex-container a:active,
-.flexslider a:active,
-.flex-container a:focus,
-.flexslider a:focus {
-  outline: none;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\0000324}}
-.slides,
-.flex-control-nav,
-.flex-direction-nav {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* FlexSlider Necessary Styles
-*********************************/
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\0000332}}
-.flexslider {
-  margin: 0 0 2.49rem 0;
-  padding: 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\0000337}}
-.flexslider .slides > li {
-  display: none;
-  -webkit-backface-visibility: hidden;
-}
-
-/* Hide the slides before the JS is loaded. Avoids image jumping */
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\0000342}}
-.flexslider .slides img {
-  display: block;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\0000346}}
-.flex-pauseplay span {
-  text-transform: capitalize;
-}
-
-/* Clearfix for the .slides element */
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\0000351}}
-.slides:after {
-  content: "\0020";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\0000360}}
-html[xmlns] .slides {
-  display: block;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\0000364}}
-* html .slides {
-  height: 1%;
-}
-
-/* No JavaScript Fallback */
-/* If you are not using another script, such as Modernizr, make sure you
- * include js that eliminates this class on page load */
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\0000371}}
-.no-js .slides > li:first-child {
-  display: block;
-}
-
-/* FlexSlider Default Theme
-*********************************/
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\0000377}}
-.flexslider {
-  position: relative;
-  zoom: 1;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\0000382}}
-.flex-viewport {
-  max-height: 2000px;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\0000390}}
-.loading .flex-viewport {
-  max-height: 300px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\0000394}}
-.flexslider .slides {
-  zoom: 1;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\0000398}}
-.flexslider .slides a {
-  display: block;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003102}}
-.carousel li {
-  margin-right: 5px;
-}
-
-/* Direction Nav */
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003107}}
-.flex-direction-nav {
-  *height: 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003111}}
-.flex-direction-nav a {
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  color: #fff;
-  cursor: pointer;
-  display: block;
-  height: 60px;
-  line-height: 40px;
-  margin: -20px 0 0;
-  overflow: hidden;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  transition: all .3s ease;
-  width: 60px;
-  z-index: 10;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003129}}
-.flex-direction-nav .flex-prev {
-  left: -50px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003133}}
-.flex-direction-nav .flex-next {
-  right: -50px;
-  text-align: right;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003138}}
-.flexslider:hover .flex-prev {
-  opacity: 0.7;
-  left: 10px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003143}}
-.flexslider:hover .flex-next {
-  opacity: 0.7;
-  right: 10px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003149}}
-.flexslider:hover .flex-next:hover,
-.flexslider:hover .flex-prev:hover {
-  opacity: 1;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003153}}
-.flex-direction-nav .flex-disabled {
-  cursor: default;
-  filter: alpha(opacity=0);
-  opacity: 0 !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003159}}
-.flex-direction-nav a:before {
-  content: '\E806';
-  display: block;
-  font-family: "fontello";
-  font-size: 2rem;
-  margin: 0 0.2em 1em 0.2em;
-  padding-top: 0.3em;
-  text-align: center;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003169}}
-.flex-direction-nav a.flex-next:before {
-  content: '\E802';
-}
-
-/* Pause/Play */
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003175}}
-.flex-pauseplay a {
-  bottom: 5px;
-  color: #000;
-  cursor: pointer;
-  display: block;
-  height: 20px;
-  left: 10px;
-  opacity: 0.8;
-  overflow: hidden;
-  position: absolute;
-  width: 20px;
-  z-index: 10;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003189}}
-.flex-pauseplay a:before {
-  font-family: "flexslider-icon";
-  font-size: 20px;
-  display: inline-block;
-  content: '\f004';
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003196}}
-.flex-pauseplay a:hover {
-  opacity: 1;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003200}}
-.flex-pauseplay a.flex-play:before {
-  content: '\f003';
-}
-
-/* Control Nav */
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003205}}
-.flex-control-nav {
-  bottom: 40px;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  z-index: 2;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003213}}
-.flex-control-nav li {
-  display: inline-block;
-  *display: inline;
-  margin: 0 6px;
-  zoom: 1;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003220}}
-.flex-control-paging li a {
-  width: 16px;
-  height: 16px;
-  display: block;
-  background: #fff;
-  cursor: pointer;
-  text-indent: -9999px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -o-border-radius: 20px;
-  border-radius: 20px;
-  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-  -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003237}}
-.flex-control-paging li a:hover {
-  background: #cccccc;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003241}}
-.flex-control-paging li a.flex-active {
-  background: #cccccc;
-  cursor: default;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003246}}
-.flex-control-thumbs {
-  margin: 5px 0 0;
-  position: static;
-  overflow: hidden;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003252}}
-.flex-control-thumbs li {
-  width: 25%;
-  float: left;
-  margin: 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003258}}
-.flex-control-thumbs img {
-  width: 100%;
-  display: block;
-  opacity: .7;
-  cursor: pointer;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003265}}
-.flex-control-thumbs img:hover {
-  opacity: 1;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003269}}
-.flex-control-thumbs .flex-active {
-  opacity: 1;
-  cursor: default;
-}
-
-@media screen and (max-width: 860px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003276}}
-  .flex-direction-nav .flex-prev {
-    opacity: 1;
-    left: 10px;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003281}}
-  .flex-direction-nav .flex-next {
-    opacity: 1;
-    right: 10px;
-  }
-}
-/* FlexSlider Homepage hero overrides
-*********************************/
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003290}}
-.flexslider--hero {
-  margin: 0 0 3rem 0;
-}
-@media screen and (min-width: 48em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003290}}
-  .flexslider--hero {
-    height: 30rem;
-    margin: 0;
-  }
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003298}}
-.flexslider--hero .flex-control-nav {
-  bottom: 0.495rem;
-}
-@media screen and (min-width: 48em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003298}}
-  .flexslider--hero .flex-control-nav {
-    bottom: 0.99rem;
-  }
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003305}}
-.flexslider--hero .flexslider__item {
-  overflow: hidden;
-  padding-bottom: 3rem;
-}
-@media screen and (min-width: 48em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003305}}
-  .flexslider--hero .flexslider__item {
-    height: 30rem;
-  }
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003313}}
-.flexslider--hero .flexslider__item--one {
-  background-color: #cccccc;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003317}}
-.flexslider--hero .flexslider__item--two {
-  background-color: #666666;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003321}}
-.flexslider--hero .flexslider__item--three {
-  background-color: #dddddd;
-}
-
-@media screen and (min-width: 60em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003325}}
-  .flexslider__link {
-    position: relative;
-    z-index: 2;
-  }
-}
-
-@media screen and (min-width: 60em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003332}}
-  .flexslider--hero .flex-caption {
-    padding: 3rem 0 0 0;
-  }
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003338}}
-.flexslider--hero .flex-caption__label {
-  font-size: 0.75rem;
-  font-family: standard_liferegular, Arial, Helvetica, "Lucida Grande", sans-serif;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  margin: 0;
-}
-@media screen and (min-width: 48em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003338}}
-  .flexslider--hero .flex-caption__label {
-    font-size: 0.875rem;
-    letter-spacing: 5px;
-    margin-bottom: 1.5rem;
-    margin-top: 4.5rem;
-  }
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003353}}
-.flexslider--hero .flex-caption__title {
-  font-size: 2rem;
-  font-family: standard_liferegular, Arial, Helvetica, "Lucida Grande", sans-serif;
-  line-height: 2.25rem;
-  margin-bottom: 0.75rem;
-}
-@media screen and (min-width: 48em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003353}}
-  .flexslider--hero .flex-caption__title {
-    font-size: 3rem;
-    line-height: 3.75rem;
-    margin-bottom: 1.5rem;
-    padding-left: 15%;
-    padding-right: 15%;
-  }
-}
-@media screen and (min-width: 60em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003353}}
-  .flexslider--hero .flex-caption__title {
-    font-size: 5rem;
-  }
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003373}}
-.flexslider--hero .flex-caption__desc {
-  display: none;
-}
-@media screen and (min-width: 60em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003373}}
-  .flexslider--hero .flex-caption__desc {
-    display: block;
-    font-family: georgia, serif;
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-    margin: 0 0 1.5rem 0;
-  }
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003385}}
-.flexslider--hero .flex-caption__action {
-  display: inline-block;
-  font-size: 0.8125rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  width: auto;
-}
-@media screen and (min-width: 60em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003385}}
-  .flexslider--hero .flex-caption__action {
-    border: 2px solid #333333;
-    font-size: 0.875rem;
-    padding: 0.375rem 0.75rem;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003395}}
-  .flexslider--hero .flex-caption__action:hover {
-    background-color: #333333;
-    color: #fff;
-  }
-}
-
-@media screen and (max-width: 47.95em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003403}}
-  .flexslider--hero .flex-direction-nav {
-    display: none;
-  }
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003409}}
-.flexslider--hero .flex-direction-nav a {
-  background-color: #fff;
-  color: #cccccc;
-  opacity: 1;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003415}}
-.flexslider--hero .flex-direction-nav a {
-  background-color: #fff;
-  color: #cccccc;
-  opacity: 1;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003421}}
-.flexslider--hero .flex-direction-nav .flex-disabled {
-  cursor: default;
-  opacity: 1 !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003426}}
-.flexslider--hero .flex-direction-nav .flex-prev {
-  left: 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_flexslider\.scss}line{font-family:\00003430}}
-.flexslider--hero .flex-direction-nav .flex-next {
-  right: 0;
-}
-
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_tabs\.scss}line{font-family:\000031}}
 .tabs {
   border-bottom: solid 1px #e6e6e6;
@@ -3839,25 +3332,24 @@ ul.tabs-content > li.active {
   color: #4b4b4b;
 }
 
-/* Accordion ---------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_accordion\.scss}line{font-family:\000033}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_accordion\.scss}line{font-family:\0000317}}
 .accordionTrigger {
   margin: 0 0 0.495rem 0;
   padding-right: 3rem;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_accordion\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_accordion\.scss}line{font-family:\0000321}}
 .accordionTrigger:hover, .accordionTrigger.active {
   cursor: pointer;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_accordion\.scss}line{font-family:\0000310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_accordion\.scss}line{font-family:\0000324}}
 .accordionTrigger i {
   position: absolute;
   right: 0.495rem;
   top: 0.45rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_accordion\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_accordion\.scss}line{font-family:\0000331}}
 .accordionContainer {
   margin: 1.5rem 0 0 0;
 }
@@ -3931,48 +3423,48 @@ ul.tabs-content > li.active {
   margin-top: 0.75rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003133}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003132}}
 .btn--primary {
   background-color: #333333;
   color: #f2f2f2;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003137}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003136}}
 .btn--primary:hover {
   background-color: #1a1a1a;
   color: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003153}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003144}}
 .btn--warning {
   background-color: #ff8a00;
   color: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003159}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003150}}
 .btn--danger {
   background-color: #dc4437;
   color: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003165}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003156}}
 .btn--success {
   background-color: #4385f5;
   color: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003171}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003162}}
 .btn--info {
   background-color: #0a7bc3;
   color: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003177}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003168}}
 .btn--inverse {
   background-color: #666666;
   color: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003212}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003187}}
 .btn-group {
   *zoom: 1;
   list-style: none outside none;
@@ -3986,7 +3478,7 @@ ul.tabs-content > li.active {
 .btn-group:after {
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003215}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003190}}
 .btn-group .btn {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -3995,27 +3487,27 @@ ul.tabs-content > li.active {
   display: block;
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003221}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003196}}
 .btn-group .btn:hover {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
   color: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003228}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003203}}
 .btn-group .active .btn {
   background-color: #cccccc;
   border: 1px solid #cccccc;
   color: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003238}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003213}}
 .btn-group > * {
   float: left;
   margin: 0 0 0 -1px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003243}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_buttons\.scss}line{font-family:\00003218}}
 .btn-group > *:first-child {
   margin-left: 0;
 }
@@ -4459,13 +3951,13 @@ textarea[disabled] {
   background-color: white;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_tables\.scss}line{font-family:\0000389}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_tables\.scss}line{font-family:\0000388}}
 .table--condensed th,
 .table--condensed td {
   padding: 4px 5px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_tables\.scss}line{font-family:\0000398}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_tables\.scss}line{font-family:\0000397}}
 .table--bordered {
   border: 1px solid #b3b3b3;
   border-collapse: separate;
@@ -4475,19 +3967,19 @@ textarea[disabled] {
   -ms-border-radius: 4px;
   border-radius: 4px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_tables\.scss}line{font-family:\00003105}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_tables\.scss}line{font-family:\00003104}}
 .table--bordered th,
 .table--bordered td {
   border-left: 1px solid #b3b3b3;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_tables\.scss}line{font-family:\00003118}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_tables\.scss}line{font-family:\00003117}}
 .table--striped tbody > tr:nth-child(odd) > td,
 .table--striped tbody > tr:nth-child(odd) > th {
   background-color: #cccccc;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_tables\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_tables\.scss}line{font-family:\00003130}}
 .table--hover tbody tr:hover > td,
 .table--hover tbody tr:hover > th {
   background-color: gray;
@@ -4502,149 +3994,6 @@ textarea[disabled] {
 .list--footer .list__link {
   color: #cccccc;
   font-size: 0.8125rem;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\000031}}
-.article-content {
-  padding-bottom: 1.5rem;
-}
-@media screen and (min-width: 60em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\000031}}
-  .article-content {
-    overflow: visible;
-    padding-top: 1.5rem;
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\0000314}}
-.article-content h2 {
-  color: #333;
-  font-size: 3.2rem;
-  font-weight: normal;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\0000320}}
-.article-content h3 {
-  color: #333;
-  font-size: 2.588rem;
-  font-weight: normal;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\0000326}}
-.article-content h4 {
-  color: #333;
-  font-size: 1.97rem;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\0000331}}
-.article-content p, .article-content ul, .article-content ol {
-  color: #444;
-  font-family: Arial, Helvetica, "Lucida Grande", sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  margin-bottom: 1.125rem;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\0000339}}
-.article-content ul li, .article-content ol li {
-  margin-bottom: 0.375rem;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\0000344}}
-.article-content .pull-center {
-  float: none;
-}
-@media screen and (min-width: 48em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\0000344}}
-  .article-content .pull-center {
-    text-align: center;
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\0000351}}
-.article-content .pull-left {
-  float: none;
-}
-@media screen and (min-width: 48em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\0000351}}
-  .article-content .pull-left {
-    float: left;
-    margin: 0 1.5rem 1.5rem 0;
-    width: 45%;
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\0000360}}
-.article-content .pull-right {
-  float: none;
-}
-@media screen and (min-width: 48em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\0000360}}
-  .article-content .pull-right {
-    float: right;
-    margin: 0 0 1.5rem 1.5rem;
-    width: 45%;
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\0000369}}
-.article-content table {
-  font-size: 0.9375rem;
-}
-@media screen and (min-width: 75em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\0000369}}
-  .article-content table {
-    margin-left: -11%;
-    margin-right: -34%;
-    width: 145%;
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\0000379}}
-.article-content figure {
-  margin: 1.5rem 0;
-}
-@media screen and (min-width: 60em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\0000379}}
-  .article-content figure {
-    margin-left: -10%;
-    margin-right: -34%;
-    position: relative;
-    width: 145%;
-  }
-}
-@media screen and (min-width: 60em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\0000390}}
-  .article-content .figcaption {
-    color: #999999;
-    font-size: 0.8125rem;
-    margin: 1.5rem -5%;
-    position: relative;
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\00003100}}
-.article-content .audio-caption {
-  background-color: #fff;
-  color: #666;
-  padding: 0.495rem 0.495rem 1.5rem 0.495rem;
-  position: relative;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\00003107}}
-.article-content .audio-caption-title {
-  font-size: 1.3125rem;
-  margin: 0;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\00003112}}
-.article-content .audio-caption .icon {
-  background-color: #fff;
-  color: #cccccc;
-  font-size: 1.375rem;
-  height: 32px;
-  left: 0;
-  line-height: 32px;
-  position: absolute;
-  text-align: center;
-  top: -32px;
-  width: 32px;
-}
-
-@media screen and (min-width: 48em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Development\/sldg\/content\/sass\/_article\.scss}line{font-family:\00003127}}
-  .article-tools {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
 }
 
 /* Default ---------------------- */
