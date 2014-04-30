@@ -1,9 +1,11 @@
 require 'listen'
 
-COMPASS_PATH = "content"
-SASS_PATH = "content/sass"
-CSS_FILE_PATH = "content/css/all.css"
+ROOT = "content"
+SASS_PATH = "#{ROOT}/sass"
+CSS_FILE_PATH = "#{ROOT}/css/all.css"
 KSS_TEMPLATE_PATH = "styleguide-template/"
+KSS_COMMAND = "kss-node #{SASS_PATH}  --template #{KSS_TEMPLATE_PATH} --style #{CSS_FILE_PATH}"
+SASS_COMMAND = "compass compile #{ROOT} -e production --force --css-dir=css"
 
 task :default => ['kss:styleguide']
 
@@ -14,7 +16,7 @@ namespace :kss do
 	end
 	
 	task :styleguide => ['sass:compile'] do 
-		system "kss-node #{SASS_PATH}  --template #{KSS_TEMPLATE_PATH} --style #{CSS_FILE_PATH}"
+		system "#{KSS_COMMAND}"
 	end
 	
 	task :watch do
@@ -24,8 +26,10 @@ namespace :kss do
 			puts "Modified: #{modified}"
 			puts "Added: #{added}"
 			puts "Removed: #{removed}"
+			puts "Recompiling sass"
+			system "#{SASS_COMMAND}"
 			puts "Running kss styleguide generation"
-			system "kss-node #{SASS_PATH}  --template #{KSS_TEMPLATE_PATH} --style #{CSS_FILE_PATH}"
+			system "#{KSS_COMMAND}"
 		end
 		listener = Listen.to(SASS_PATH, :force_polling => true, &callback)
 		listener.start # not blocking
@@ -35,7 +39,7 @@ end
 
 namespace :sass do
 	task :compile do
-		system "compass compile #{COMPASS_PATH} -e production --force --css-dir=css"
+		system "#{SASS_COMMAND}"
 	end
 end
 
