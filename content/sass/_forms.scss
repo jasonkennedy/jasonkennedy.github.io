@@ -26,11 +26,13 @@
 //      <label for="exampleTextarea1">Text area</label>	
 //      <textarea cols="30" rows="4" id="exampleTextarea1"></textarea>	
 //    </li>
-//    <li>
-//      <label for="inlineInput1">Inline input</label>	
-//      <div>
-//        <input type="text" id="inlineInput1" size="50" maxlength="50"> 
-//        <button class="btn">Search</button>
+//    <li class="row">
+//      <label for="inlineInput1">Inline input</label>
+//      <div class="col medium_9">
+// 			<input type="text" id="inlineInput1" size="50" maxlength="50" class=""> 
+//      </div>
+//      <div class="col medium_3">
+// 			<button class="btn btn--block" class="">Search</button>
 //      </div>
 //    </li>
 //    <li>
@@ -81,10 +83,8 @@
 //        </label>
 //      </fieldset>
 //    </li>
-//    <li>
-//      <button type="submit" class="btn btn--default">Submit</button>
-//    </li>
 //  </ul>
+//  <button type="submit" class="btn btn--default">Submit</button>
 //</form>
 //
 // Styleguide 5.1
