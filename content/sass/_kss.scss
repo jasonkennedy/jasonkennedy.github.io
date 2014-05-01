@@ -1,0 +1,24 @@
+#kss-node {
+	border-top: 0;
+	}
+	
+#kss-node .kss-doc-title {
+	color: $mid-grey-1;
+	}
+	
+#kss-node .kss-title .kss-ref {
+    color: $mid-grey-1;
+	}
+	
+#kss-node .kss-depth-1 .kss-title, 
+#kss-node .kss-overview > h1:first-child {
+	border-bottom: 2px solid $mid-grey-1;
+	}
+	
+#kss-node .kss-menu > .kss-menu-item > a > .kss-ref {
+	color: $mid-grey-1;
+	}
+	
+#kss-node .kss-menu > .kss-menu-item.kss-active > a {
+	border-bottom-color: $dark-grey-1;
+	}
