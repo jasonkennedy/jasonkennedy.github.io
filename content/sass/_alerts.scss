@@ -17,30 +17,32 @@
 .alert {
     background-color:$light-grey-1;
 	border:1px solid darken($light-grey-1, 20%);
-	color:$secondary-color;
 	display:block;
 	margin:lh(1) 0;
-	padding:lh(1) lh(1.66);
-	text-align:center;
+	padding:lh(1);
 	}
 	
 
 .alert--info {
     background-color:$light-grey-2;
 	border:1px solid darken($light-grey-2, 20%);
+	color:darken($light-grey-2, 30%);
 	}
 	
 .alert--success {
     background-color:$light-grey-3;
 	border:1px solid darken($light-grey-3, 20%);
+	color:darken($light-grey-3, 30%);
 	}
 	
 .alert--warning {
     background-color:$mid-grey-2;
 	border:1px solid darken($mid-grey-2, 20%);
+	color:darken($mid-grey-2, 30%);
 	}
 	
 .alert--danger {
-    background-color:$mid-grey-3;
-	border:1px solid darken($mid-grey-3, 20%);
+    background-color:$light-grey-3;
+	border:1px solid darken($light-grey-3, 20%);
+	color:darken($light-grey-3, 30%);
 	}
