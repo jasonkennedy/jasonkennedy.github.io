@@ -32,6 +32,27 @@ body {
 			}
 		}
 	}
+	
+.wrap {
+	@include clearfix();
+	margin:0 auto;
+	width:94%;
+	
+	@include respond-min(60em) {
+		max-width:1200px;
+		width:100%;
+		}
+		
+	@include respond-min(90em) {
+		max-width:1600px;
+		width:100%;
+		}
+		
+	@include old-ie {
+		width:1200px;
+		}
+		
+	}	
 
 	
 /* Default transitions */

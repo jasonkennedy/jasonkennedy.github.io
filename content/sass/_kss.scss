@@ -22,3 +22,27 @@
 #kss-node .kss-menu > .kss-menu-item.kss-active > a {
 	border-bottom-color: $dark-grey-1;
 	}
+	
+#kss-node .kss-menu > .kss-menu-item {
+	font-size: 15px;
+	}
+	
+#kss-node .kss-menu > .kss-menu-item > a {
+	font-weight: 300;
+	}
+	
+#kss-node .kss-menu > .kss-menu-item > a:hover {
+	color: $dark-grey-3;
+	}
+	
+#kss-node .kss-menu-child > .kss-menu-item > a:hover {
+	color: $dark-grey-3;
+	}
+	
+#kss-node .kss-menu-child > .kss-menu-item > a > .kss-ref {
+	color: $dark-grey-3;
+	}
+	
+#kss-node .kss-markup pre {
+    border-color: #E3E3E3 #E3E3E3 #E3E3E3 $dark-grey-3;
+	}

@@ -251,26 +251,7 @@
 	border-color:$secondary-color;
 	}
 	
-.borders-vertical {	
-	border-top:2px solid $primary-color;
-	border-bottom:1px dotted $light-grey-2;
-	margin-bottom:lh(.5);
-	padding:lh(.25) 0 lh(.75) 0;
-	&.bg-grey {
-		padding-left:lh(.33);
-		}
-
-	}	
 	
-.borders-vertical-large {	
-	border-bottom:2px solid $primary-color;
-	border-top:2px solid $primary-color;
-	padding:lh(.33) 0 lh(1) 0;
-	&.bg-grey {
-		padding-left:lh(.33);
-		}
-	}
-
 
 /* Overlines ---------------------- */		
 .overline {

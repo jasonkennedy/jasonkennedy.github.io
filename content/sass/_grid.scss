@@ -79,3 +79,338 @@ body {
 ------------------------------------------------*/
 
 $total-width: 100%;
+
+
+/* GRID - CLASSES
+------------------------------------------------*/
+
+.col {
+	@include respond-max(48em) {
+		display: block;
+		width:100%;
+		}
+				
+	display: inline;
+	float: left;
+	margin-bottom:lh(1);
+	}
+
+.small_1 {	
+	@include column(1);	
+	}
+	
+.small_2 {	
+	@include column(2);	
+	}
+	
+.small_3 {	
+	@include column(3);	
+	}
+	
+.small_4 {	
+	@include column(4);	
+	}
+	
+.small_5 {	
+	@include column(5);	
+	}
+	
+.small_6 {	
+	@include column(6);	
+	}
+	
+.small_7 {	
+	@include column(7);	
+	}
+	
+.small_8 {	
+	@include column(8);	
+	}
+	
+.small_9 {	
+	@include column(9);	
+	}
+	
+.small_10 {	
+	@include column(10);	
+	}
+	
+.small_12 {	
+	@include column(12);
+	display:block;	
+	}
+	
+.medium_1 {	
+	@include respond-min(48em) {
+		@include column(1);
+		}		
+	}
+	
+.medium_2 {	
+	@include respond-min(48em) {
+		@include column(2);
+		}		
+	}
+	
+.medium_3 {	
+	@include respond-min(48em) {
+		@include column(3);
+		}		
+	}
+	
+.medium_4 {	
+	@include respond-min(48em) {
+		@include column(4);
+		}		
+	}
+	
+.medium_5 {	
+	@include respond-min(48em) {
+		@include column(5);
+		}		
+	}
+	
+.medium_6 {	
+	@include respond-min(48em) {
+		@include column(6);
+		}		
+	}
+	
+.medium_7 {	
+	@include respond-min(48em) {
+		@include column(7);
+		}		
+	}
+	
+.medium_8 {	
+	@include respond-min(48em) {
+		@include column(8);
+		}		
+	}
+	
+.medium_9 {	
+	@include respond-min(48em) {
+		@include column(9);
+		}		
+	}
+	
+.medium_10 {	
+	@include respond-min(48em) {
+		@include column(10);
+		}		
+	}
+	
+.medium_11 {	
+	@include respond-min(48em) {
+		@include column(11);
+		}		
+	}
+	
+.medium_12 {
+	@include respond-min(48em) {
+		@include column(12);
+		display:block;
+		float:none;
+		}
+	}
+
+.large_1 {	
+	@include respond-min(60em) {
+		@include column(1);
+		}			
+	}
+
+.large_2 {	
+	@include respond-min(60em) {
+		@include column(2);
+		}			
+	}
+	
+.large_3 {	
+	@include respond-min(60em) {
+		@include column(3);
+		}			
+	}
+	
+.large_4 {
+	@include respond-min(60em) {
+		@include column(4);
+		}
+	}
+	
+.large_5 {
+	@include respond-min(60em) {
+		@include column(5);
+		}
+	}
+	
+.large_6 {	
+	@include respond-min(60em) {
+		@include column(6);
+		}		
+	}
+	
+.large_7 {
+	@include respond-min(60em) {
+		@include column(7);
+		}
+	}
+	
+.large_8 {
+	@include respond-min(60em) {
+		@include column(8);
+		}
+	}
+		
+.large_9 {
+	@include respond-min(60em) {
+		@include column(9);
+		}
+	}
+	
+.large_10 {
+	@include respond-min(60em) {
+		@include column(10);
+		}
+	}
+	
+.large_11 {
+	@include respond-min(60em) {
+		@include column(10);
+		}
+	}
+	
+.large_12 {
+	@include respond-min(60em) {
+		@include column(12);
+		display:block;
+		float:none;
+		}
+	}
+
+.xlarge_1 {
+	@include respond-min(90em) {
+		@include column(1);
+		}
+	}
+	
+.xlarge_2 {
+	@include respond-min(90em) {
+		@include column(2);
+		}
+	}
+	
+.xlarge_3 {
+	@include respond-min(90em) {
+		@include column(3);
+		}
+	}
+	
+.xlarge_4 {
+	@include respond-min(90em) {
+		@include column(4);
+		}
+	}
+	
+.xlarge_5 {
+	@include respond-min(90em) {
+		@include column(5);
+		}
+	}
+	
+.xlarge_6 {
+	@include respond-min(90em) {
+		@include column(6);
+		}
+	}
+	
+.xlarge_8 {
+	@include respond-min(90em) {
+		@include column(8);
+		}
+	}
+	
+.xlarge_9 {
+	@include respond-min(90em) {
+		@include column(9);
+		}
+	}
+	
+.xlarge_10 {
+	@include respond-min(90em) {
+		@include column(10);
+		}
+	}
+
+.push_1 {
+	@include respond-min(48em) {
+		@include push(1);
+		}
+	}
+
+.push_1--large {
+	@include respond-min(60em) {
+		@include push(1);
+		}
+	}
+
+.push_2 {
+	@include respond-min(48em) {
+		@include push(2);
+		}
+	}
+
+.push_2--large {
+	@include respond-min(60em) {
+		@include push(2);
+		}
+	}
+
+.push_3 {
+	@include respond-min(48em) {
+		@include push(3);
+		}
+	}
+
+.push_4 {
+	@include respond-min(8em) {
+		@include push(4);
+		}
+	}
+	
+.pull_1 {
+	@include respond-min(48em) {
+		@include pull(1);
+		}
+	}
+
+.pull_1--large {
+	@include respond-min(60em) {
+		@include pull(1);
+		}
+	}
+	
+.pull_2 {
+	@include respond-min(48em) {
+		@include pull(2);
+		}
+	}
+
+.pull_3 {
+	@include respond-min(48em) {
+		@include pull(3);
+		}
+	}
+
+.pull_4 {
+	@include respond-min(48em) {
+		@include pull(4);
+		}
+	}
+		
+.row {
+	@include clearfix();
+	@include respond-min(48em) {
+		@include row;
+		}
+	}

@@ -1,3 +1,154 @@
+// Basic elements example
+//
+//Basic example introduction text to go here
+//
+// Markup:
+//<form class="form soft outline bg-light-grey-1" role="form">
+//  <ul>
+//    <li>
+//      <label for="exampleText1">Textfield <em>Optional</em></label>
+//      <input type="text" id="exampleText1" name="exampleText1">
+//    </li>
+//    <li>
+//      <label for="exampleInputEmail1">Email address</label>
+//      <input type="email" placeholder="Enter email" title="Example help text">
+//      <p class="gamma">Example help text</p>
+//    </li>
+//    <li>
+//      <label for="exampleInputPassword1">Password</label>
+//      <input type="password" placeholder="Password" id="exampleInputPassword1">
+//    </li>
+//    <li>
+//      <label for="exampleInputPassword2">Confirm Password</label>
+//      <input type="password" placeholder="Confirm Password" id="exampleInputPassword2">
+//    </li>
+//    <li>
+//      <label for="exampleTextarea1">Text area</label>	
+//      <textarea cols="30" rows="4" id="exampleTextarea1"></textarea>	
+//    </li>
+//    <li>
+//      <label for="inlineInput1">Inline input</label>	
+//      <div>
+//        <input type="text" id="inlineInput1" size="50" maxlength="50"> 
+//        <button class="btn">Search</button>
+//      </div>
+//    </li>
+//    <li>
+//      <label for="exampleDropdown1">Dropdown</label>	
+//      <select id="exampleDropdown1">
+//        <option value="">Please select ...</option>
+//        <option value="Edinburgh">Edinburgh</option>
+//        <option value="Frankfurt">Frankfurt</option>
+//        <option value="Hong Kong">Hong Kong</option>
+//        <option value="Montreal">Montreal</option>
+//      </select>
+//    </li>
+//    <li>
+//      <label for="exampleInputFile">File input</label>
+//      <input type="file" id="exampleInputFile">
+//    <li>
+//    <li>
+//      <fieldset>
+//        <legend>Checkbox</legend>	
+//        <label for="exampleCheckbox1" class="inline-block">
+//          <input type="checkbox" checked="checked" value="Forms" id="exampleCheckbox1"> 
+//          Forms
+//        </label>
+//        <label for="exampleCheckbox2" class="inline-block">
+//          <input type="checkbox" value="Pages" id="exampleCheckbox2"> 
+//          Pages
+//        </label>
+//        <label for="exampleCheckbox3" class="inline-block">
+//          <input type="checkbox" value="Directories" id="exampleCheckbox3""> 
+//          Directories
+//        </label>
+//      </fieldset>
+//    </li>
+//    <li>
+//      <fieldset class="inline-fields">
+//        <legend>Radio</legend>	
+//        <label for="exampleradio1" class="inline-block">
+//          <input type="radio" class="checkbox" value="One" id="xforms_Radio_0"> 
+//          One
+//        </label>
+//        <label for="exampleradio2" class="inline-block">
+//        <input type="radio" class="checkbox" checked="checked" value="Two" id="exampleradio2"> 
+//          Two
+//        </label>
+//        <label for="exampleradio3" class="inline-block">
+//          <input type="radio" class="checkbox" value="Three" id="exampleradio3"> 
+//          Three
+//        </label>
+//      </fieldset>
+//    </li>
+//    <li>
+//      <button type="submit" class="btn btn--default">Submit</button>
+//    </li>
+//  </ul>
+//</form>
+//
+// Styleguide 5.1
+
+
+
+
+
+
+
+
+
+// Horizontal Form
+//
+//Horizontal form example introduction text to go here
+//
+//Markup:
+//<form class="form soft outline bg-light-grey-1" role="form">
+//	<div class="row">
+//		<label for="exampleInputEmail5" class="col medium_3">Email address</label>
+//		<div class="col medium_9">
+//			<input type="email" id="exampleInputEmail5"  placeholder="Enter email">
+//		</div>
+//	</div>
+//	<div class="row">
+//		<label for="exampleInputPassword5" class="col medium_3">Password</label>
+//		<div class="col medium_9">
+//			<input type="password" id="exampleInputPassword5" placeholder="Password">
+//		</div>
+//	</div>
+//  <div class="row">
+//    <label for="exampleInputFile5" class="col medium_3">File input</label>
+//	  <div class="col medium_9">
+//     	<input type="file" id="exampleInputFile5">
+//     	<p class="gamma">Example block-level help text here.</p>
+//    </div>
+//  </div>
+//  <div class="checkbox push_3">
+//    <label>
+//      <input type="checkbox"> Check me out
+//    </label>
+//  </div>
+//  <button type="submit" class="btn btn--default">Submit</button>
+//</form>
+//
+// Styleguide 5.2
+
+
+// Supported controls
+//
+//Examples of standard form controls supported in an example form layout.
+//
+//Markup:
+//
+// Styleguide 5.2
+
+
+
+
+
+
+
+
+
 /* We use this to get basic styling on all basic form elements */ 
 input[type="text"],
 input[type="password"],
@@ -7,6 +158,7 @@ input[type="datetime-local"],
 input[type="month"],
 input[type="week"],
 input[type="email"],
+input[type="file"],
 input[type="number"],
 input[type="search"],
 input[type="tel"],
@@ -31,6 +183,7 @@ input[type="datetime-local"]:focus,
 input[type="month"]:focus,
 input[type="week"]:focus,
 input[type="email"]:focus,
+input[type="file"]:focus,
 input[type="number"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
@@ -51,6 +204,7 @@ input[type="datetime-local"]:focus,
 input[type="month"]:focus,
 input[type="week"]:focus,
 input[type="email"]:focus,
+input[type="file"]:focus,
 input[type="number"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
@@ -85,7 +239,15 @@ textarea[disabled] {
 	background-color:#fff;
 	margin-bottom:lh();
 	margin-top:lh();
-	
+	ul {
+		list-style-type:none;
+		}
+		
+	ul > li {
+		display:block;
+		margin-bottom:lh(1);
+		}
+		
 	@include respond-min(48em) {
 		.error {
 			display:block;
@@ -93,30 +255,25 @@ textarea[disabled] {
 		}
 		
 	legend {
-		background-color:$grey;
-		margin:0 0 lh(.5) 0;
-		padding:lh(.5) lh(.75);
-		width:100%;
-		@include respond-min(48em) {
-			padding:lh(.5) lh(1);
-			}
+		display:block;
 		}
 		
 	label {
-		color:$dark-grey-1;
 		display:block;
+		color:$dark-grey-1;
 		padding:lh(.1) 0;
 		}
 	
-	input[type="text"],
-	input[type="password"], 
-	input[type=checkbox],
+	input,
 	select,
 	textarea {
-		display:block;
-		margin:lh(.25) 0 lh(.75) 0;
+		max-width:100%;
 		padding:lh(.5);
 		width:100%;
+		}
+		
+	select {
+		width:auto;
 		}
 		
 	input[type=checkbox] {
