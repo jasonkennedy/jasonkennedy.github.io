@@ -1,3 +1,43 @@
+// Standard Life font
+//
+// <div>
+// <p class="">We have our own font called Standard Life font. It is unique to Standard Life. </p><p class="">It is the only font that should be used for headlines, titles, headers, sub heads. It can also work well for short body copy, especially at larger sizes.</p> <p class="tera">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z</p><p class="tera">1 2 3 4 5 6 7 8 9 0 , . < > ? ! £ @ & ( )</p>
+// </div>
+// 
+// Styleguide 14.1
+
+
+
+// Typographic scale
+//
+// <p>A suggested typography scale based on traditional typographical measures that will flex according to device size and provides the flexibility to use on any UI element.</p><p> The ability to mix a combination of typeface, size and colour should ensure a consistent and flexible typographic approach across all properties appropriate to the specific requirements.</p>
+//
+// Markup:
+// <div>
+//   <p class="tera">Tera</p>
+//   <p class="giga">Giga</p>
+//   <p class="mega">Mega</p>
+//   <p class="alpha">Alpha</p>
+//   <p class="beta">Beta</p>
+//   <p class="gamma">Gamma</p>
+//   <p class="delta">Delta</p>
+//   <p class="epsilon">Epsilon</p>
+//   <p class="alpha">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+//  <a href="http://typecast.com/blog/a-more-modern-scale-for-web-typography" class="gamma">A More Modern Scale for Web Typography</a>
+// </div>
+// 
+// Styleguide 14.2
+
+
+// Typographic utilities
+//
+// To help style..... etc etc etc
+//
+// Markup:
+//
+// 
+// Styleguide 14.3
+
 
 @font-face {
 	font-family: 'standard_liferegular';
@@ -8,8 +48,8 @@
 		 url('../webfonts/standardlife/standardlife-regular-webfont.svg#standard_liferegular') format('svg');
 	font-weight: normal;
 	font-style: normal;
-	
 	}
+	
 	
 @font-face {
 	font-family: 'standard_lifebold';
@@ -63,65 +103,85 @@
 	font-family:$primary-font-bold-italic;
 	}
 
-
 .secondary-font	 {
 	font-family:$secondary-font;	
 	}
 
-.georgia {
-	font-family:Georgia, serif;
-	}
 	
 /* Modular Scale http://modularscale.com/scale/?px1=16&px2=32&ra1=1.618&ra2=0 */
 
 .tera {
-	font-size:rem(56px);
-	line-height:lh(2.66);
-	margin-bottom:lh(1);
-	@include respond-max(48em) {
-		font-size: rem(32px);
-		line-height:lh(1.66);
+	font-size:rem(32px);
+	line-height: 1.05;
+	
+	@include respond-min(48em) {
+		font-size:rem(40px);
+		line-height:1.125;
 		}
+		
+	@include respond-min(60em) {
+		font-size: rem(48px);
+		line-height:1.05
+		}
+		
 	}
 
 .giga { 
-	font-size:rem(32px);
-	line-height:lh(1.5);
-	margin-bottom:lh(1);
+	font-size:rem(26px);
+	line-height:1.15;
+	
+	@include respond-min(48em) {
+		font-size:rem(32px);
+		line-height:1.25;
+		}
+		
+	@include respond-min(60em) {
+		font-size:rem(36px);
+		line-height:1.25;
+		}
 	}
 
 .mega { 
-	font-size:rem(25.88px);
-	line-height:lh(1.33);
-	margin-bottom:lh(1);
+	font-size:rem(22px);
+	line-height: 1.136;
+	
+	@include respond-min(48em) {
+		font-size:rem(24px);
+		line-height:1.25;
+		}
+		
+	@include respond-min(60em) {
+		font-size:rem(28px);
+		line-height:1.25;
+		}
+		
 	}
 
 .alpha { 
-	font-size:rem(19.7px);
-	margin-bottom:lh(.5);
+	font-size:rem(18px);
+	line-height: 1.1;
+	
+	@include respond-min(48em) {
+		line-height:1.2;
+		}
+		
 	}
 
 .beta {  
-	font-size: rem(16px);
-	line-height:lh(1);
-	margin-bottom:lh(1);
+	font-size:rem(16px);
+
 	}
 
 .gamma {  
 	font-size:rem(14px);
-	line-height:lh(.9);
-	margin-bottom:lh(1);
 	}	
 
 .delta {  
 	font-size:rem(12.4px);
-	line-height:lh(.8);
 	}
 
 .epsilon {  
 	font-size:rem(9.88px);
-	line-height:lh(.7);
-	margin-bottom:lh(1);
 	}
 
 .zeta {  

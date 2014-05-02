@@ -1,9 +1,18 @@
+// Layout utilities
+//
+// .pull-left - Pull left
+// .pull-left--medium - Pull left after medium breakpoint
+// .pull-left--large - Pull left after medium breakpoint
+// .pull-right - Pull right
+// .pull-right--medium - Pull right after medium breakpoint
+// .pull-right--large - Pull right after medium breakpoint
+//
+// Markup:
+// <a class="btn {$modifiers}">Button</a>
+//
+// Styleguide 7.1
 
 
-.center {
-	text-align:center;
-	}
-	
 .block {
 	display:block;
 	}
@@ -106,6 +115,28 @@
 		}	
 	}
 
+
+// Add margins
+//
+// .push - All sides
+// .push--top - Top margin
+// .push--right - Right margin
+// .push--bottom - Bottom margin
+// .push--left - Left margin
+// .push--ends - Vertical margins
+// .push--sides - Horizontal margin
+// .push-half - Half margins
+// .push-half--top - Half top margin
+// .push-half--right - Half right margin
+// .push-half--bottom - Half bottom margin
+// .push-half--left - Half left margin
+// .push-half--ends - Half vertival margins
+// .push-half--sides  - Half horizontal margins
+//
+// Markup:
+// <a class="btn {$modifiers}">Button</a>
+//
+// Styleguide 7.2
 	
 /**
  * Add/remove margins
@@ -175,6 +206,22 @@
 	margin-right: $font-base-line-height-half!important; 
 	margin-left:  $font-base-line-height-half!important; 
 	}
+	
+	
+// Remove margins
+//
+// .flush - Remove all margins
+// .flush--top - Remove top margin
+// .flush--right - Remove right margin
+// .flush--bottom - Remove bottom margin
+// .flush--left - Remove left margin
+// .flush--ends - Remove vertical margins
+// .flush--sides - Remove horizontal margins
+//
+// Markup:
+// <a class="btn {$modifiers}">Button</a>
+//
+// Styleguide 7.3
 
 .flush { 
 	margin:0!important; 
@@ -206,7 +253,27 @@
 	margin-left:  0!important; 
 	}
 
-
+// Add padding
+//
+// .soft - All sides
+// .soft--top - Top padding
+// .soft--right - Right padding
+// .soft--bottom - Bottom padding
+// .soft--left - Left padding
+// .soft--ends - Vertical padding
+// .soft--sides - Horizontal padding
+// .soft-half - Half padding
+// .soft-half--top - Half top padding
+// .soft-half--right - Half right padding
+// .soft-half--bottom - Half bottom padding
+// .soft-half--left - Half left padding
+// .soft-half--ends - Half vertival padding
+// .soft-half--sides  - Half horizontal padding
+//
+// Markup:
+// <a class="btn {$modifiers}">Button</a>
+//
+// Styleguide 7.4
 /**
  * Add/remove paddings
  */
@@ -275,6 +342,22 @@
 	padding-right:$font-base-line-height-half!important; 
 	padding-left:  $font-base-line-height-half!important; 
 	}
+
+// Remove padding
+//
+// .hard - Remove all padding
+// .hard--top - Remove top padding
+// .hard--right - Remove right padding
+// .hard--bottom - Remove bottom padding
+// .hard--left - Remove left padding
+// .hard--ends - Remove vertical padding
+// .hard--sides - Remove horizontal padding
+//
+// Markup:
+// <a class="btn {$modifiers}">Button</a>
+//
+// Styleguide 7.5
+
 	
 .hard { 
 	padding: 0!important; 
@@ -308,17 +391,6 @@
 
 .clear--left  {
 	clear:left;
-	}
-
-.center-container.is-inline { 
-	text-align: center;
-	overflow: auto;
-	overflow-y:hidden;
-	padding:lh(2) lh(1.66) 0 lh(1.66);
-	@include respond-min(60em) {
-		height:100vh;
-		padding:0;
-		}
 	}
 
 pre {
