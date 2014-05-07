@@ -2,10 +2,10 @@
 //
 // .pull-left - Pull left
 // .pull-left--medium - Pull left after medium breakpoint
-// .pull-left--large - Pull left after medium breakpoint
+// .pull-left--large - Pull left after large breakpoint
 // .pull-right - Pull right
 // .pull-right--medium - Pull right after medium breakpoint
-// .pull-right--large - Pull right after medium breakpoint
+// .pull-right--large - Pull right after large breakpoint
 //
 // Markup:
 // <a class="btn {$modifiers}">Button</a>
@@ -65,23 +65,6 @@
 	right:0;
 	}
 	
-.text--center {
-	text-align:center;
-	}
-	
-.text--left {
-	text-align:left;
-	}
-
-.text--right {
-	text-align:right;
-	}
-
-.text--right--medium {
-	@include respond-min(48em) {
-		text-align:right;
-		}
-	}
 	
 .pull-right {
 	float:right !important;
@@ -388,6 +371,41 @@
 	padding-right: 0!important;
 	padding-left:  0!important;
 	}
+	
+	
+// Text Align Classes
+//
+// .text--left - Remove top padding
+// .text--right - Remove right padding
+// .text--bottom - Remove bottom padding
+// .text--left - Remove left padding
+// .text--ends - Remove vertical padding
+// .text--sides - Remove horizontal padding
+//
+// Markup:
+// <a class="btn {$modifiers}">Button</a>
+//
+// Styleguide 7.6
+
+.text--center {
+	text-align:center;
+	}
+	
+.text--left {
+	text-align:left;
+	}
+
+.text--right {
+	text-align:right;
+	}
+	
+.text--right--medium {
+	@include respond-min(48em) {
+		text-align:right;
+		}
+	}
+
+	
 
 .clear--left  {
 	clear:left;

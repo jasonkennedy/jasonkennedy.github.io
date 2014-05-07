@@ -24,6 +24,8 @@
     
     <![endif]-->
     
+    <script src="../content/js/libs/modernizr.js"></script>
+    
   </head>
   
   <body id="kss-node">
@@ -317,6 +319,22 @@
               
               
               
+              
+              <li class="kss-menu-item">
+              
+                  <a href="#section-3.1">
+                  
+                      <span class="kss-ref">3.1</span>
+                      
+                      <span class="kss-name">HTML5 Audio player</span>
+                  
+                  </a>
+              
+              </li>
+              
+              
+              
+              
             </ul>
             
             
@@ -357,6 +375,80 @@
           
           
           
+          <section id="section-3.1" class="kss-section kss-depth-2">
+          
+            <h1 class="kss-title"><span class="kss-ref">3.1</span> HTML5 Audio player</h1>
+            
+            
+            
+            
+            
+            <div class="kss-description">
+            
+              <p>About....
+Javascript Dependencies....</p>
+
+              
+            </div>
+            
+            
+            
+            <div class="kss-modifier-block">
+            
+              <div class="kss-modifier kss-modifier-original">
+              
+                <div class="kss-modifier-example">
+                
+                  <div class="panel bg-dark-grey-2">
+ <div class="audio-caption light-grey-2"> 
+   <i class="icon icon-volume-up"></i>
+   <p>How we Decide <span class="delta">(14mins)</span></p>
+ </div>
+   <audio preload="auto" controls>
+     <source src="../content/audio/BlueDucks_FourFlossFiveSix.mp3">
+     <source src="../content/audio/BlueDucks_FourFlossFiveSix.ogg">
+     <source src="../content/audio/BlueDucks_FourFlossFiveSix.wav">
+   </audio>    
+ <a class="btn btn--small push--ends" title="Right click and choose Save link as..." href="https://d97i5tfmntrq8.cloudfront.net/d3f61fe0-d2e5-00a6-ae4c-9dbe00f4eefb/Jonah-Lehrer-Final-Edit-MONO-CAT.mp3">
+   <i class="icon-download"></i> 
+   Download Audio File
+ </a> 
+</div>
+                  
+                </div>
+                
+              </div>
+              
+              
+              
+              <div class="kss-markup">
+              
+                <pre><code data-language="html">&lt;div class=&quot;panel bg-dark-grey-2&quot;&gt;
+ &lt;div class=&quot;audio-caption light-grey-2&quot;&gt; 
+   &lt;i class=&quot;icon icon-volume-up&quot;&gt;&lt;/i&gt;
+   &lt;p&gt;How we Decide &lt;span class=&quot;delta&quot;&gt;(14mins)&lt;/span&gt;&lt;/p&gt;
+ &lt;/div&gt;
+   &lt;audio preload=&quot;auto&quot; controls&gt;
+     &lt;source src=&quot;../content/audio/BlueDucks_FourFlossFiveSix.mp3&quot;&gt;
+     &lt;source src=&quot;../content/audio/BlueDucks_FourFlossFiveSix.ogg&quot;&gt;
+     &lt;source src=&quot;../content/audio/BlueDucks_FourFlossFiveSix.wav&quot;&gt;
+   &lt;/audio&gt;    
+ &lt;a class=&quot;btn btn--small push--ends&quot; title=&quot;Right click and choose Save link as...&quot; href=&quot;https://d97i5tfmntrq8.cloudfront.net/d3f61fe0-d2e5-00a6-ae4c-9dbe00f4eefb/Jonah-Lehrer-Final-Edit-MONO-CAT.mp3&quot;&gt;
+   &lt;i class=&quot;icon-download&quot;&gt;&lt;/i&gt; 
+   Download Audio File
+ &lt;/a&gt; 
+&lt;/div&gt;</code></pre>
+                
+              </div>
+              
+            </div>
+            
+            
+            
+          </section>
+          
+          
+          
           
           
         </article>
@@ -386,6 +478,16 @@
     <script src="public/jquery-1.9.1.min.js"></script>
     
 	<script src="public/storm.js"></script>
+
+    <script src="../content/js/libs/jquery.foundation.tabs.js"></script>
+    
+    <script src="../content/js/libs/easyResponsiveTabs.js"></script>
+    
+    <script src="../content/js/libs/jquery.foundation.tooltips.js"></script>
+    
+    <script src="../content/js/libs/audioplayer.min.js"></script>
+    
+    <script src="../content/js/core.js"></script>
     
 	<script>
 		$(function() {

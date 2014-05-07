@@ -1,3 +1,27 @@
+// HTML5 Audio player
+//
+// About....
+// Javascript Dependencies....
+//
+//Markup:
+//<div class="panel bg-dark-grey-2">
+//  <div class="audio-caption light-grey-2"> 
+//    <i class="icon icon-volume-up"></i>
+//    <p>How we Decide <span class="delta">(14mins)</span></p>
+//  </div>
+//    <audio preload="auto" controls>
+//      <source src="../content/audio/BlueDucks_FourFlossFiveSix.mp3">
+//      <source src="../content/audio/BlueDucks_FourFlossFiveSix.ogg">
+//      <source src="../content/audio/BlueDucks_FourFlossFiveSix.wav">
+//    </audio>    
+//  <a class="btn btn--small push--ends" title="Right click and choose Save link as..." href="https://d97i5tfmntrq8.cloudfront.net/d3f61fe0-d2e5-00a6-ae4c-9dbe00f4eefb/Jonah-Lehrer-Final-Edit-MONO-CAT.mp3">
+//    <i class="icon-download"></i> 
+//    Download Audio File
+//  </a> 
+//</div>
+//
+// Styleguide 3.1
+
 .audioplayer {
 	height: 2.5em; /* 40 */
 	color: #fff;

@@ -1,10 +1,63 @@
+// Simple tabs
+//
+// About....
+// Javascript Dependencies....
+//
+// Markup:
+//<dl class="cf tabs">
+//  <dd class="active">
+//    <a href="#simple1">
+//      Tab 1
+//    </a>
+//  </dd>
+//  <dd>
+//    <a href="#simple2">
+//      Tab 2
+//    </a>
+//  </dd>
+//  <dd>
+//    <a href="#simple3">
+//      Tab 3
+//    </a>
+//  </dd>
+//  <dd>
+//    <a href="#simple4">
+//      Tab 4
+//    </a>
+//  </dd>
+//</dl>
+//<ul class="cf tabs__content">
+//  <li id="simple1Tab" class="active">
+//    Some tab content 1
+//  </li>
+//  <li id="simple2Tab">
+//    Some tab content 2
+//  </li>
+//  <li id="simple3Tab">
+//    Some tab content 3
+//  </li>
+//  <li id="simple4Tab">
+//    Some tab content 4
+//  </li>
+//</ul>
+//
+// Styleguide 11.1
+
+
+
 .tabs { 
+	@include clearfix();
 	border-bottom: solid 1px $light-grey-2;
 	display: block; 
-	height:36px;
+	font-family:$primary-font;
+	height:48px;
 	list-style: none;
-	padding: 0 lh(.33); 
 	margin-bottom: 20px; 
+	padding: 0 lh(.33); 
+	}
+	
+.tabs--dark { 
+	border-bottom: solid 1px $dark-grey-2;
 	}
 
 .tabs dd { 
@@ -13,6 +66,7 @@
 	margin: 0; 
 	padding: 0; 
 	}
+	
 
 .tabs dd a { 
 	background-color:$light-grey-1;
@@ -20,10 +74,33 @@
 	border-top: 2px solid $light-grey-1;
 	color:$mid-grey-3;
 	display: block; 
-	font-size: rem(12px);
-	height:36px;
-	line-height:36px;
-	padding: 0 lh(.66);
+	font-size:em(14px);
+	height:48px;
+	line-height:48px;
+	padding: 0 lh(.33);
+	@include respond-min(48em) {
+		font-size:em(16px);
+		padding: 0 lh(.66);
+		}
+	}
+	
+.tabs--dark dd a { 
+	background-color:$dark-grey-2;
+	border-left: 1px solid $dark-grey-2;
+	border-top: 2px solid $dark-grey-2;
+	color:$light-grey-3;
+	}
+	
+.tabs--dark dd {
+	background-color:$dark-grey-1;
+	color:$mid-grey-1;
+	}
+	
+.tabs--small dd a { 
+	font-size:em(13px);
+	height:48px;
+	line-height:48px;
+	padding: 0 lh(.5);
 	}
 
 .tabs dd a:hover  { 
@@ -32,6 +109,13 @@
 	border-top: 2px solid $light-grey-2;
 	color:$dark-grey-3;
 	cursor: pointer; 
+	}
+	
+.tabs--dark dd a:hover  { 
+	background-color:$mid-grey-2;
+	border-left: 1px solid $mid-grey-2;
+	border-top: 2px solid $mid-grey-2;
+	color:$dark-grey-3;
 	}
 	
 .tabs dd.active a  { 
@@ -43,9 +127,20 @@
 	cursor: default; 
 	text-shadow:none;
 	}
+	
+.tabs--dark dd.active a  {
+	background-color:$dark-grey-3;
+	border-left: 1px solid $dark-grey-2;
+	border-right: 1px solid $dark-grey-2;
+	color:$light-grey-1;
+	}
 
-.tabs dd:first-child { 
-	margin-left: 0; 
+
+.tabs--events dd:first-child {
+  	margin-left: 0; 
+   @include respond-min(60em) {
+		@include push(2);
+		}
 	}
 
 .tabs.two-up dd {
@@ -53,23 +148,212 @@
 	width:50%;
 	}
 
-ul.tabs-content { 
+ul.tabs__content { 
 	display: block; 
 	margin: 0 0 20px 0;
-	padding: 0; 
 	}
 
-ul.tabs-content > li { 
+ul.tabs__content > li { 
 	display: none; 
 	}
 
-ul.tabs-content > li.active { 
+ul.tabs__content > li.active { 
 	display: block; 
 	margin:0;
 	padding:0;
 	}
 
-.no-js ul.tabs-content > li { 
+.no-js ul.tabs__content > li { 
 	display: block;
 	}
+	
+	
+	
+	
+// Responsive tabs to accordion
+//
+// Markup:
+//<div id="horizontalTab">
+// <ul class="resp-tabs-list">
+//   <li>
+//     Tab 1
+//   </li>
+//   <li>
+//      Tab 2
+//   </li>
+//  </ul>
+//  <div class="resp-tabs-container">
+//    <div>
+//       Tab 1 content
+//    </div>
+//    <div>
+//      Tab 2 content
+//    </div>
+//  </div>
+//</div>	
+//
+// Styleguide 11.2	
+	
+.resp-tabs-list {
+	@include clearfix();
+	border-bottom: solid 1px $light-grey-2;
+	height:48px;
+	margin: 0;
+	padding: 0 0 0 lh(.33);
+	}
+
+.resp-tab-item {
+	background-color:$primary-color;
+	border-right: 1px solid darken($primary-color,5%);
+	border-top: 2px solid $primary-color;
+	color:#fff;
+	cursor: pointer;
+	display: block;
+	float: left;
+	font-family:$primary-font;
+	font-size:em(14px);
+	height:48px;
+	line-height:48px;
+	list-style: none;
+	margin:0;
+	padding: 0 lh(.66);
+	&:hover {
+		background-color:darken($primary-color,5%);
+		border-right: 1px solid darken($primary-color,5%);
+		border-top: 2px solid darken($primary-color,5%);
+		color:#fff;
+		cursor: pointer; 
+		}
+		
+	}
+	
+.resp-tabs-list .resp-tab-active, 
+.resp-tabs-list .resp-tab-active:hover {
+	background-color:#fff;
+	border-bottom: 1px solid #fff;
+	border-left: 1px solid $light-grey-2;
+	border-right: 1px solid $light-grey-2;
+	border-top: 2px solid $secondary-color; 
+	color:$dark-grey-3;
+	cursor: pointer; 
+	text-shadow:none;
+	}
+
+.resp-content-active, 
+.resp-accordion-active {
+	display: block;
+	}
+
+.resp-tabs-container {
+	background-color: #fff;
+	clear: left;
+	margin-bottom:lh(1);
+	padding: 0px;
+	@include respond-min(60em) {
+		padding: lh(.66) 0;
+		}
+	}
+
+.resp-accordion {
+	background-color: $primary-color;
+	border: 1px solid darken($primary-color, 10%);
+	border-bottom:none;
+	color:#fff;
+	cursor: pointer;
+	display: none;
+	font-family:$primary-font;
+	margin: 0px;
+	padding: lh(.5) lh(1);
+	}
+	
+.resp-tab-content {
+	display: none;
+	padding:lh(.33) 0;
+	@include respond-min(60em) {
+		padding: lh(.66) lh(1);
+		}
+	}
+
+.resp-tab-title:last-child {
+	border-bottom: 12px solid $mid-grey-1;
+	background: blue;
+	}
+	
+/*-----------Accordion styles-----------*/
+
+.resp-tabs-container .resp-tab-active {
+	background: darken($primary-color, 10%);
+	border-color: darken($primary-color, 10%);
+	color:#fff;
+	}
+	
+.resp-easy-accordion .resp-accordion {
+	display: block;
+	}
+	
+.resp-easy-accordion .resp-tab-content {
+	border: 1px solid $mid-grey-1;
+	}
+
+.resp-easy-accordion .resp-tab-content:last-child {
+	border-bottom: 1px solid $mid-grey-1;
+	}
+
+.resp-jfit {
+	margin: 0px;
+	width: 100%;
+	}
+
+.resp-tab-content-active {
+	display: block;
+	}
+
+.resp-accordion:first-child {
+	
+	}
+
+/*Here your can change the breakpoint to set the accordion, when screen resolution changed*/
+@include respond-max(60em) {
+	
+    ul.resp-tabs-list {
+        display: none;
+    	}
+
+    .resp-accordion {
+        display: block;
+    	}
+
+    .resp-accordion-closed {
+        display:none !important;
+    	}
+
+	}
+	
+.resp-arrow {
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 12px solid #fff;
+	height: 0;
+	float: right;
+	margin-top: 3px;
+	width: 0;
+	}
+
+.resp-tab-active span.resp-arrow {
+	border: none;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 12px solid #fff;
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	

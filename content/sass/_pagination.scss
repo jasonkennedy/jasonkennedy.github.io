@@ -1,0 +1,145 @@
+// Base styles & states
+//
+//Pagination is a type of navigation that lets users tap through a series of related pages. Moving between pages has become less common with the advent of longer pages and AJAX loading.
+//
+// Markup:
+//<div>
+//  <ul class="pagination__list"> 
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link pagination__link--unavailable">&laquo;</a>
+//    </li>
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link">1</a>
+//    </li> 
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link">2</a>
+//    </li>
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link pagination__link--active">3</a>
+//    </li>
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link">4</a>
+//    </li>
+//    <li class="pagination__item">
+//       <a href="" class="pagination__link pagination__link--unavailable">&hellip;</a>
+//    </li>
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link">5</a>
+//    </li>
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link">6</a>
+//    </li>
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link">7</a>
+//    </li>
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link">8</a>
+//    </li>
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link pagination__link--unavailable">&raquo;</a>
+//    </li>
+//  </ul>
+//</div>
+//
+// Styleguide 10.1
+
+// Horizontally centered
+//
+// Wrap your .pagination__list with an element that has the .pagination--centered class to center your pagination.
+//
+// Markup:
+//<div class="pagination--centered">
+//  <ul class="pagination__list"> 
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link pagination__link--unavailable">&laquo;</a>
+//    </li>
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link">1</a>
+//    </li> 
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link">2</a>
+//    </li>
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link pagination__link--active">3</a>
+//    </li>
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link">4</a>
+//    </li>
+//    <li class="pagination__item">
+//       <a href="" class="pagination__link pagination__link--unavailable">&hellip;</a>
+//    </li>
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link">5</a>
+//    </li>
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link">6</a>
+//    </li>
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link">7</a>
+//    </li>
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link">8</a>
+//    </li>
+//    <li class="pagination__item">
+//      <a href="" class="pagination__link pagination__link--unavailable">&raquo;</a>
+//    </li>
+//  </ul>
+//</div>
+//
+// Styleguide 10.2
+
+// Core
+
+.pagination--centered {
+	text-align: center;
+
+	}
+
+.pagination__list {
+	@include clearfix();
+	display:block;
+	list-style-type:none;
+	margin-bottom:lh(1);
+	margin-left:rem(-4px);
+	margin-top:lh(1);
+	width:auto;
+	}
+	
+.pagination__item {
+	display:inline-block;
+	float:none;
+	}
+	
+.pagination__unavailable {
+
+	}
+	
+.pagination__link {
+	background-color:$light-grey-1;
+	color:$dark-grey-1;
+	display:block;
+	height:lh(2);
+	line-height:lh(2);
+	margin:0 lh(.33);
+	padding:0 lh(.66);
+	text-align:center;
+	&:hover {
+		background-color:$mid-grey-1;
+		}
+	}
+	
+.pagination__link--active {
+	background-color:$dark-grey-3;
+	color:#fff;
+	&:hover {
+		background-color:$dark-grey-3;
+		color:#fff;
+		}
+	}
+	
+.pagination__link--unavailable {
+	&:hover {
+		background-color:$light-grey-1;
+		color:$dark-grey-1;
+		}
+	}

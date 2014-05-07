@@ -24,6 +24,8 @@
     
     <![endif]-->
     
+    <script src="../content/js/libs/modernizr.js"></script>
+    
   </head>
   
   <body id="kss-node">
@@ -317,6 +319,38 @@
               
               
               
+              
+              <li class="kss-menu-item">
+              
+                  <a href="#section-10.1">
+                  
+                      <span class="kss-ref">10.1</span>
+                      
+                      <span class="kss-name">Base styles &amp; states</span>
+                  
+                  </a>
+              
+              </li>
+              
+              
+              
+              
+              
+              <li class="kss-menu-item">
+              
+                  <a href="#section-10.2">
+                  
+                      <span class="kss-ref">10.2</span>
+                      
+                      <span class="kss-name">Horizontally centered</span>
+                  
+                  </a>
+              
+              </li>
+              
+              
+              
+              
             </ul>
             
             
@@ -357,6 +391,240 @@
           
           
           
+          <section id="section-10.1" class="kss-section kss-depth-2">
+          
+            <h1 class="kss-title"><span class="kss-ref">10.1</span> Base styles &amp; states</h1>
+            
+            
+            
+            
+            
+            <div class="kss-description">
+            
+              <p>Pagination is a type of navigation that lets users tap through a series of related pages. Moving between pages has become less common with the advent of longer pages and AJAX loading.</p>
+
+              
+            </div>
+            
+            
+            
+            <div class="kss-modifier-block">
+            
+              <div class="kss-modifier kss-modifier-original">
+              
+                <div class="kss-modifier-example">
+                
+                  <div>
+ <ul class="pagination__list"> 
+   <li class="pagination__item">
+     <a href="" class="pagination__link pagination__link--unavailable">&laquo;</a>
+   </li>
+   <li class="pagination__item">
+     <a href="" class="pagination__link">1</a>
+   </li> 
+   <li class="pagination__item">
+     <a href="" class="pagination__link">2</a>
+   </li>
+   <li class="pagination__item">
+     <a href="" class="pagination__link pagination__link--active">3</a>
+   </li>
+   <li class="pagination__item">
+     <a href="" class="pagination__link">4</a>
+   </li>
+   <li class="pagination__item">
+      <a href="" class="pagination__link pagination__link--unavailable">&hellip;</a>
+   </li>
+   <li class="pagination__item">
+     <a href="" class="pagination__link">5</a>
+   </li>
+   <li class="pagination__item">
+     <a href="" class="pagination__link">6</a>
+   </li>
+   <li class="pagination__item">
+     <a href="" class="pagination__link">7</a>
+   </li>
+   <li class="pagination__item">
+     <a href="" class="pagination__link">8</a>
+   </li>
+   <li class="pagination__item">
+     <a href="" class="pagination__link pagination__link--unavailable">&raquo;</a>
+   </li>
+ </ul>
+</div>
+                  
+                </div>
+                
+              </div>
+              
+              
+              
+              <div class="kss-markup">
+              
+                <pre><code data-language="html">&lt;div&gt;
+ &lt;ul class=&quot;pagination__list&quot;&gt; 
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link pagination__link--unavailable&quot;&gt;&laquo;&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link&quot;&gt;1&lt;/a&gt;
+   &lt;/li&gt; 
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link&quot;&gt;2&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link pagination__link--active&quot;&gt;3&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link&quot;&gt;4&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;pagination__item&quot;&gt;
+      &lt;a href=&quot;&quot; class=&quot;pagination__link pagination__link--unavailable&quot;&gt;&hellip;&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link&quot;&gt;5&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link&quot;&gt;6&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link&quot;&gt;7&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link&quot;&gt;8&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link pagination__link--unavailable&quot;&gt;&raquo;&lt;/a&gt;
+   &lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                
+              </div>
+              
+            </div>
+            
+            
+            
+          </section>
+          
+          
+          
+          <section id="section-10.2" class="kss-section kss-depth-2">
+          
+            <h1 class="kss-title"><span class="kss-ref">10.2</span> Horizontally centered</h1>
+            
+            
+            
+            
+            
+            <div class="kss-description">
+            
+              <p>Wrap your .pagination__list with an element that has the .pagination--centered class to center your pagination.</p>
+
+              
+            </div>
+            
+            
+            
+            <div class="kss-modifier-block">
+            
+              <div class="kss-modifier kss-modifier-original">
+              
+                <div class="kss-modifier-example">
+                
+                  <div class="pagination--centered">
+ <ul class="pagination__list"> 
+   <li class="pagination__item">
+     <a href="" class="pagination__link pagination__link--unavailable">&laquo;</a>
+   </li>
+   <li class="pagination__item">
+     <a href="" class="pagination__link">1</a>
+   </li> 
+   <li class="pagination__item">
+     <a href="" class="pagination__link">2</a>
+   </li>
+   <li class="pagination__item">
+     <a href="" class="pagination__link pagination__link--active">3</a>
+   </li>
+   <li class="pagination__item">
+     <a href="" class="pagination__link">4</a>
+   </li>
+   <li class="pagination__item">
+      <a href="" class="pagination__link pagination__link--unavailable">&hellip;</a>
+   </li>
+   <li class="pagination__item">
+     <a href="" class="pagination__link">5</a>
+   </li>
+   <li class="pagination__item">
+     <a href="" class="pagination__link">6</a>
+   </li>
+   <li class="pagination__item">
+     <a href="" class="pagination__link">7</a>
+   </li>
+   <li class="pagination__item">
+     <a href="" class="pagination__link">8</a>
+   </li>
+   <li class="pagination__item">
+     <a href="" class="pagination__link pagination__link--unavailable">&raquo;</a>
+   </li>
+ </ul>
+</div>
+                  
+                </div>
+                
+              </div>
+              
+              
+              
+              <div class="kss-markup">
+              
+                <pre><code data-language="html">&lt;div class=&quot;pagination--centered&quot;&gt;
+ &lt;ul class=&quot;pagination__list&quot;&gt; 
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link pagination__link--unavailable&quot;&gt;&laquo;&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link&quot;&gt;1&lt;/a&gt;
+   &lt;/li&gt; 
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link&quot;&gt;2&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link pagination__link--active&quot;&gt;3&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link&quot;&gt;4&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;pagination__item&quot;&gt;
+      &lt;a href=&quot;&quot; class=&quot;pagination__link pagination__link--unavailable&quot;&gt;&hellip;&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link&quot;&gt;5&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link&quot;&gt;6&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link&quot;&gt;7&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link&quot;&gt;8&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class=&quot;pagination__item&quot;&gt;
+     &lt;a href=&quot;&quot; class=&quot;pagination__link pagination__link--unavailable&quot;&gt;&raquo;&lt;/a&gt;
+   &lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                
+              </div>
+              
+            </div>
+            
+            
+            
+          </section>
+          
+          
+          
           
           
         </article>
@@ -386,6 +654,16 @@
     <script src="public/jquery-1.9.1.min.js"></script>
     
 	<script src="public/storm.js"></script>
+
+    <script src="../content/js/libs/jquery.foundation.tabs.js"></script>
+    
+    <script src="../content/js/libs/easyResponsiveTabs.js"></script>
+    
+    <script src="../content/js/libs/jquery.foundation.tooltips.js"></script>
+    
+    <script src="../content/js/libs/audioplayer.min.js"></script>
+    
+    <script src="../content/js/core.js"></script>
     
 	<script>
 		$(function() {

@@ -66,12 +66,12 @@ $(function () {
 
 
 $(".js-toggle-content").hide();
-$(".js-toggle.js-toggle-open").addClass("js-toggle-active").next().show();
+$(".js-toggle.js-toggle--open").addClass("js-toggle--active").next().show();
 
 var toggleNavFilter = function (elem) {
 	elem.siblings('div').toggle();
 	elem.children('i').toggleClass("icon-plus-squared").toggleClass("icon-minus-squared");
-	elem.toggleClass("js-toggle-active");
+	elem.toggleClass("js-toggle--active");
 };
 
 var toggle = $('.js-toggle');
@@ -83,6 +83,7 @@ toggle.on('click', function () {
 
 /* TABS ------------ */
 $(document).foundationTabs(); 
+
 
 
 /* TOOLTIPS ------------ */
@@ -105,51 +106,29 @@ $( function() { $( 'audio' ).audioPlayer(); } );
 	}
   }
   
- /* FLEXLSIDER ------------ */ 
-// Can also be used with $(document).ready()
-$(window).load(function() {
-  $('#flexslider-work').flexslider({
-    animation: "slide",
-	directionNav: false,  
-	slideshow: false,
-    controlNav: "thumbnails",
-	controlsContainer: ".flex-control-nav-custom"
-  });
   
-  $('#flexslider-home').flexslider({
-		animation: "fade",
-		slideshow: false
-	  });
-	  
-	$('#flexslider-carousel').flexslider({
-		animation: "slide",
-		animationLoop: false,
-		controlNav: false,  
-		itemWidth: 24,
-		itemMargin: 1,
-		minItems: 3,
-		maxItems: 20,
-		slideshow: false
-	  });
   
-});
-	
-	
-	
-/* STICKY PRIMARY NAV ------------ */ 	
-$(function() {
-	var div = $('#fixed');
-	var start = $(div).offset().top;
- 
-	$(window).bind("scroll", function() {
-		var p = $(window).scrollTop();
-		$(div).toggleClass('fixed', p > start);
+ $(document).ready(function () {
+	$('#horizontalTab').easyResponsiveTabs({
+		type: 'default', //Types: default, vertical, accordion
+		width: 'auto', //auto or any width like 600px
+		fit: true, // 100% fit in a container
+		closed: 'accordion', // Start closed if in accordion view
+		activate: function(event) { // Callback function if tab is switched
+			var $tab = $(this);
+			var $info = $('#tabInfo');
+			var $name = $('span', $info);
+
+			$name.text($tab.text());
+
+			$info.show();
+		}
 	});
+
+	$('#verticalTab').easyResponsiveTabs({
+		type: 'vertical',
+		width: 'auto',
+		fit: true
+	});
+});
  
-});
-
-
-	
-$(function(){
-  $.scrollIt();
-});

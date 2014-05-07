@@ -1,7 +1,8 @@
-// Visible
+// Show by Screen Size
 //
 //Visibility classes let you show or hide elements based on screen size or device orientation. You can use visibility classes to control which elements 
 //
+//In this example, we use the show visibility classes to show certain strings of text based on the device on which users view a page. If their browser meets the class's conditions, the element will be shown. If not, it will be hidden.
 //
 // Markup:
 //<div class="panel">
@@ -15,6 +16,26 @@
 //</div>
 //
 // Styleguide 16.1
+
+
+// Hide by Screen Size
+//
+//This example shows the opposite: It uses the hide visibility classes to state which elements should disappear based on your device's screen size or orientation. Users will see elements on every browser except those that meet these conditions.
+//
+//
+// Markup:
+//<div class="panel">
+//	<p class="hide-for-small-only">You are <em>not</em> on a small screen.</p>
+//	<p class="hide-for-medium-up">You are <em>not</em> on a medium, large, xlarge screen.</p>
+//	<p class="hide-for-medium-only">You are <em>not</em> on a medium screen.</p>
+//	<p class="hide-for-large-up">You are <em>not</em> on a large, xlarge screen.</p>
+//	<p class="hide-for-large-only">You are <em>not</em> on a large screen.</p> 
+//	<p class="hide-for-xlarge-up">You are <em>not</em> on an xlarge screen.</p>
+//	<p class="hide-for-xlarge-only">You are <em>not</em> on an xlarge screen.</p>
+//</div>
+//
+// Styleguide 16.2
+
 
 .show-for-small-only {
 	@include respond-min(48em) {
@@ -73,19 +94,82 @@
 		display: none !important;
 		}
 	}
+	
+	
+	
+	
+	
+.hide-for-small-only {
+	display:none;
+	@include respond-min(48em) {
+		display: inherit !important;
+		}
+	}
+		
+.hide-for-medium-up {
+	@include respond-min(48em) {
+		display: none !important;
+		}
+	}
+	
+.hide-for-medium-only {
+	@include respond-min(48em) {
+		display: none !important;
+		}
+	@include respond-min(60em) {
+		display: inherit !important;
+		}	
+	}
+
+.hide-for-large-up {
+	@include respond-min(59.95em) {
+		display: none !important;
+		}
+	}
+	
+.hide-for-large-only {			
+	@include respond-min(60em) {
+		display: none !important;
+		}		
+	@include respond-min(75em) {
+		display: inherit !important;
+		}		
+	}
+	
+.hide-for-xlarge-up {
+	@include respond-min(74.95em) {
+		display: none !important;
+		}
+	}
+	
+.hide-for-xlarge-only {
+	display:none;
+	@include respond-max(74.95em) {
+		display: inherit !important;
+		}
+	}
+
+
+
+
+
+
+
+
 
 .hide-on-small {
 	@include respond-max(48em) {
 		@include visuallyhidden;
 		}
 	}
-	
+
 @include respond-min(60em) {
 	.hide-on-large {
 		@include visuallyhidden;
 		}
 	}
-
+	
+	
 
 .visuallyhidden {
 	border: 0;

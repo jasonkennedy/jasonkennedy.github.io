@@ -24,6 +24,8 @@
     
     <![endif]-->
     
+    <script src="../content/js/libs/modernizr.js"></script>
+    
   </head>
   
   <body id="kss-node">
@@ -317,6 +319,38 @@
               
               
               
+              
+              <li class="kss-menu-item">
+              
+                  <a href="#section-11.1">
+                  
+                      <span class="kss-ref">11.1</span>
+                      
+                      <span class="kss-name">Simple tabs</span>
+                  
+                  </a>
+              
+              </li>
+              
+              
+              
+              
+              
+              <li class="kss-menu-item">
+              
+                  <a href="#section-11.2">
+                  
+                      <span class="kss-ref">11.2</span>
+                      
+                      <span class="kss-name">Responsive tabs to accordion</span>
+                  
+                  </a>
+              
+              </li>
+              
+              
+              
+              
             </ul>
             
             
@@ -357,6 +391,192 @@
           
           
           
+          <section id="section-11.1" class="kss-section kss-depth-2">
+          
+            <h1 class="kss-title"><span class="kss-ref">11.1</span> Simple tabs</h1>
+            
+            
+            
+            
+            
+            <div class="kss-description">
+            
+              <p>About....
+Javascript Dependencies....</p>
+
+              
+            </div>
+            
+            
+            
+            <div class="kss-modifier-block">
+            
+              <div class="kss-modifier kss-modifier-original">
+              
+                <div class="kss-modifier-example">
+                
+                  <dl class="cf tabs">
+ <dd class="active">
+   <a href="#simple1">
+     Tab 1
+   </a>
+ </dd>
+ <dd>
+   <a href="#simple2">
+     Tab 2
+   </a>
+ </dd>
+ <dd>
+   <a href="#simple3">
+     Tab 3
+   </a>
+ </dd>
+ <dd>
+   <a href="#simple4">
+     Tab 4
+   </a>
+ </dd>
+</dl>
+<ul class="cf tabs__content">
+ <li id="simple1Tab" class="active">
+   Some tab content 1
+ </li>
+ <li id="simple2Tab">
+   Some tab content 2
+ </li>
+ <li id="simple3Tab">
+   Some tab content 3
+ </li>
+ <li id="simple4Tab">
+   Some tab content 4
+ </li>
+</ul>
+                  
+                </div>
+                
+              </div>
+              
+              
+              
+              <div class="kss-markup">
+              
+                <pre><code data-language="html">&lt;dl class=&quot;cf tabs&quot;&gt;
+ &lt;dd class=&quot;active&quot;&gt;
+   &lt;a href=&quot;#simple1&quot;&gt;
+     Tab 1
+   &lt;/a&gt;
+ &lt;/dd&gt;
+ &lt;dd&gt;
+   &lt;a href=&quot;#simple2&quot;&gt;
+     Tab 2
+   &lt;/a&gt;
+ &lt;/dd&gt;
+ &lt;dd&gt;
+   &lt;a href=&quot;#simple3&quot;&gt;
+     Tab 3
+   &lt;/a&gt;
+ &lt;/dd&gt;
+ &lt;dd&gt;
+   &lt;a href=&quot;#simple4&quot;&gt;
+     Tab 4
+   &lt;/a&gt;
+ &lt;/dd&gt;
+&lt;/dl&gt;
+&lt;ul class=&quot;cf tabs__content&quot;&gt;
+ &lt;li id=&quot;simple1Tab&quot; class=&quot;active&quot;&gt;
+   Some tab content 1
+ &lt;/li&gt;
+ &lt;li id=&quot;simple2Tab&quot;&gt;
+   Some tab content 2
+ &lt;/li&gt;
+ &lt;li id=&quot;simple3Tab&quot;&gt;
+   Some tab content 3
+ &lt;/li&gt;
+ &lt;li id=&quot;simple4Tab&quot;&gt;
+   Some tab content 4
+ &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                
+              </div>
+              
+            </div>
+            
+            
+            
+          </section>
+          
+          
+          
+          <section id="section-11.2" class="kss-section kss-depth-2">
+          
+            <h1 class="kss-title"><span class="kss-ref">11.2</span> Responsive tabs to accordion</h1>
+            
+            
+            
+            
+            
+            <div class="kss-modifier-block">
+            
+              <div class="kss-modifier kss-modifier-original">
+              
+                <div class="kss-modifier-example">
+                
+                  <div id="horizontalTab">
+<ul class="resp-tabs-list">
+  <li>
+    Tab 1
+  </li>
+  <li>
+     Tab 2
+  </li>
+ </ul>
+ <div class="resp-tabs-container">
+   <div>
+      Tab 1 content
+   </div>
+   <div>
+     Tab 2 content
+   </div>
+ </div>
+</div>	
+                  
+                </div>
+                
+              </div>
+              
+              
+              
+              <div class="kss-markup">
+              
+                <pre><code data-language="html">&lt;div id=&quot;horizontalTab&quot;&gt;
+&lt;ul class=&quot;resp-tabs-list&quot;&gt;
+  &lt;li&gt;
+    Tab 1
+  &lt;/li&gt;
+  &lt;li&gt;
+     Tab 2
+  &lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;div class=&quot;resp-tabs-container&quot;&gt;
+   &lt;div&gt;
+      Tab 1 content
+   &lt;/div&gt;
+   &lt;div&gt;
+     Tab 2 content
+   &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;	</code></pre>
+                
+              </div>
+              
+            </div>
+            
+            
+            
+          </section>
+          
+          
+          
           
           
         </article>
@@ -386,6 +606,16 @@
     <script src="public/jquery-1.9.1.min.js"></script>
     
 	<script src="public/storm.js"></script>
+
+    <script src="../content/js/libs/jquery.foundation.tabs.js"></script>
+    
+    <script src="../content/js/libs/easyResponsiveTabs.js"></script>
+    
+    <script src="../content/js/libs/jquery.foundation.tooltips.js"></script>
+    
+    <script src="../content/js/libs/audioplayer.min.js"></script>
+    
+    <script src="../content/js/core.js"></script>
     
 	<script>
 		$(function() {

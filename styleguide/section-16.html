@@ -24,6 +24,8 @@
     
     <![endif]-->
     
+    <script src="../content/js/libs/modernizr.js"></script>
+    
   </head>
   
   <body id="kss-node">
@@ -324,7 +326,23 @@
                   
                       <span class="kss-ref">16.1</span>
                       
-                      <span class="kss-name">Visible</span>
+                      <span class="kss-name">Show by Screen Size</span>
+                  
+                  </a>
+              
+              </li>
+              
+              
+              
+              
+              
+              <li class="kss-menu-item">
+              
+                  <a href="#section-16.2">
+                  
+                      <span class="kss-ref">16.2</span>
+                      
+                      <span class="kss-name">Hide by Screen Size</span>
                   
                   </a>
               
@@ -366,7 +384,7 @@
           
           <section id="section-16.1" class="kss-section kss-depth-2">
           
-            <h1 class="kss-title"><span class="kss-ref">16.1</span> Visible</h1>
+            <h1 class="kss-title"><span class="kss-ref">16.1</span> Show by Screen Size</h1>
             
             
             
@@ -374,7 +392,10 @@
             
             <div class="kss-description">
             
-              <p>Visibility classes let you show or hide elements based on screen size or device orientation. You can use visibility classes to control which elements </p>
+              <p>Visibility classes let you show or hide elements based on screen size or device orientation. You can use visibility classes to control which elements 
+
+</p>
+<p>In this example, we use the show visibility classes to show certain strings of text based on the device on which users view a page. If their browser meets the class&apos;s conditions, the element will be shown. If not, it will be hidden.</p>
 
               
             </div>
@@ -425,6 +446,67 @@
           
           
           
+          <section id="section-16.2" class="kss-section kss-depth-2">
+          
+            <h1 class="kss-title"><span class="kss-ref">16.2</span> Hide by Screen Size</h1>
+            
+            
+            
+            
+            
+            <div class="kss-description">
+            
+              <p>This example shows the opposite: It uses the hide visibility classes to state which elements should disappear based on your device&apos;s screen size or orientation. Users will see elements on every browser except those that meet these conditions.</p>
+
+              
+            </div>
+            
+            
+            
+            <div class="kss-modifier-block">
+            
+              <div class="kss-modifier kss-modifier-original">
+              
+                <div class="kss-modifier-example">
+                
+                  <div class="panel">
+	<p class="hide-for-small-only">You are <em>not</em> on a small screen.</p>
+	<p class="hide-for-medium-up">You are <em>not</em> on a medium, large, xlarge screen.</p>
+	<p class="hide-for-medium-only">You are <em>not</em> on a medium screen.</p>
+	<p class="hide-for-large-up">You are <em>not</em> on a large, xlarge screen.</p>
+	<p class="hide-for-large-only">You are <em>not</em> on a large screen.</p> 
+	<p class="hide-for-xlarge-up">You are <em>not</em> on an xlarge screen.</p>
+	<p class="hide-for-xlarge-only">You are <em>not</em> on an xlarge screen.</p>
+</div>
+                  
+                </div>
+                
+              </div>
+              
+              
+              
+              <div class="kss-markup">
+              
+                <pre><code data-language="html">&lt;div class=&quot;panel&quot;&gt;
+	&lt;p class=&quot;hide-for-small-only&quot;&gt;You are &lt;em&gt;not&lt;/em&gt; on a small screen.&lt;/p&gt;
+	&lt;p class=&quot;hide-for-medium-up&quot;&gt;You are &lt;em&gt;not&lt;/em&gt; on a medium, large, xlarge screen.&lt;/p&gt;
+	&lt;p class=&quot;hide-for-medium-only&quot;&gt;You are &lt;em&gt;not&lt;/em&gt; on a medium screen.&lt;/p&gt;
+	&lt;p class=&quot;hide-for-large-up&quot;&gt;You are &lt;em&gt;not&lt;/em&gt; on a large, xlarge screen.&lt;/p&gt;
+	&lt;p class=&quot;hide-for-large-only&quot;&gt;You are &lt;em&gt;not&lt;/em&gt; on a large screen.&lt;/p&gt; 
+	&lt;p class=&quot;hide-for-xlarge-up&quot;&gt;You are &lt;em&gt;not&lt;/em&gt; on an xlarge screen.&lt;/p&gt;
+	&lt;p class=&quot;hide-for-xlarge-only&quot;&gt;You are &lt;em&gt;not&lt;/em&gt; on an xlarge screen.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                
+              </div>
+              
+            </div>
+            
+            
+            
+          </section>
+          
+          
+          
           
           
         </article>
@@ -454,6 +536,16 @@
     <script src="public/jquery-1.9.1.min.js"></script>
     
 	<script src="public/storm.js"></script>
+
+    <script src="../content/js/libs/jquery.foundation.tabs.js"></script>
+    
+    <script src="../content/js/libs/easyResponsiveTabs.js"></script>
+    
+    <script src="../content/js/libs/jquery.foundation.tooltips.js"></script>
+    
+    <script src="../content/js/libs/audioplayer.min.js"></script>
+    
+    <script src="../content/js/core.js"></script>
     
 	<script>
 		$(function() {
