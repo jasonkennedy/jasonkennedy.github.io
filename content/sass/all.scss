@@ -1,5 +1,10 @@
 @import "_utils";
 
+// Grid
+//
+// Grid intro text to go here
+//
+//Styleguide 7.0
 @import "_grid";
 
 @import "_mixins";
@@ -12,6 +17,9 @@
 
 @import "_offcanvas";
 
+// Navigation
+//
+// Styleguide 13.0
 @import "_navigation";
 
 // Accordion
@@ -51,15 +59,21 @@
 //
 // Covers styles used for forms, such as the `<input>` and `<select>` elements.
 //
-// Styleguide 5.0
+// Styleguide 6.0
 @import "_forms";
 
+// Icons
+//
+// Icons intro text to go here
+//
+// Styleguide 8.0
+@import "_icons";
 
 // Images
 //
 // Images intro text to go here
 //
-// Styleguide 6.0
+// Styleguide 9.0
 @import "_images";
 
 
@@ -67,7 +81,7 @@
 //
 // Layout intro text to go here
 //
-//Styleguide 7.0
+//Styleguide 10.0
 @import "_layout";
 
 
@@ -75,7 +89,7 @@
 //
 // Lists intro text to go here
 //
-//Styleguide 8.0
+//Styleguide 11.0
 @import "_lists";
 
 
@@ -83,7 +97,7 @@
 //
 // Map intro text to go here
 //
-//Styleguide 9.0
+//Styleguide 12.0
 @import "_map";
 
 
@@ -91,7 +105,7 @@
 //
 // Pagination intro text to go here
 //
-//Styleguide 10.0
+//Styleguide 14.0
 @import "_pagination";
 
 
@@ -99,13 +113,13 @@
 //
 // Tabs intro text to go here
 //
-//Styleguide 11.0
+//Styleguide 15.0
 @import "_tabs";
 
 
 // Tables
 //
-// Styleguide 12.0
+// Styleguide 16.0
 @import "_tables";
 
 
@@ -113,28 +127,30 @@
 //
 // Tooltips intro text to go here
 //
-//Styleguide 13.0
+//Styleguide 17.0
 @import "_tooltips";
 
 
 // Typography
 //
-// Styleguide 14.0
+// Styleguide 18.0
 @import "_typography";
 
 
 // Videos
 //
-// Styleguide 15.0
+// Styleguide 19.0
 @import "_flexi-video";
 
 
 // Visibility
 //
-// Styleguide 16.0
+// Styleguide 20.0
 @import "_visibility";
 
-
-@import "_themes";
+// Colour
+//
+// Styleguide 5.0
+@import "_color";
 
 @import "_kss";

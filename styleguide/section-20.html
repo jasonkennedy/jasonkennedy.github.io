@@ -52,7 +52,7 @@
           
           <nav class="kss-nav">
           
-            <ul class="kss-menu" data-kss-ref="2">
+            <ul class="kss-menu" data-kss-ref="20">
             
               <li class="kss-menu-item">
               
@@ -382,11 +382,27 @@
               
               <li class="kss-menu-item">
               
-                  <a href="#section-2.1">
+                  <a href="#section-20.1">
                   
-                      <span class="kss-ref">2.1</span>
+                      <span class="kss-ref">20.1</span>
                       
-                      <span class="kss-name">Options</span>
+                      <span class="kss-name">Show by Screen Size</span>
+                  
+                  </a>
+              
+              </li>
+              
+              
+              
+              
+              
+              <li class="kss-menu-item">
+              
+                  <a href="#section-20.2">
+                  
+                      <span class="kss-ref">20.2</span>
+                      
+                      <span class="kss-name">Hide by Screen Size</span>
                   
                   </a>
               
@@ -412,20 +428,11 @@
           
           
           
-          <section id="section-2" class="kss-section kss-depth-1">
+          <section id="section-20" class="kss-section kss-depth-1">
           
-            <h1 class="kss-title"><span class="kss-ref">2</span> Alerts</h1>
+            <h1 class="kss-title"><span class="kss-ref">20</span> Visibility</h1>
             
             
-            
-            
-            
-            <div class="kss-description">
-            
-              <p>Alerts intro text to go here</p>
-
-              
-            </div>
             
             
             
@@ -435,9 +442,9 @@
           
           
           
-          <section id="section-2.1" class="kss-section kss-depth-2">
+          <section id="section-20.1" class="kss-section kss-depth-2">
           
-            <h1 class="kss-title"><span class="kss-ref">2.1</span> Options</h1>
+            <h1 class="kss-title"><span class="kss-ref">20.1</span> Show by Screen Size</h1>
             
             
             
@@ -445,7 +452,10 @@
             
             <div class="kss-description">
             
-              <p>You can add more classes to your alert box to change its appearance - <code>.alert--info</code>, <code>.alert--success</code>, <code>.alert--warning </code>, or <code>.alert--danger</code></p>
+              <p>Visibility classes let you show or hide elements based on screen size or device orientation. You can use visibility classes to control which elements 
+
+</p>
+<p>In this example, we use the show visibility classes to show certain strings of text based on the device on which users view a page. If their browser meets the class&apos;s conditions, the element will be shown. If not, it will be hidden.</p>
 
               
             </div>
@@ -458,123 +468,15 @@
               
                 <div class="kss-modifier-example">
                 
-                  <div class="alert {$modifiers}">This is an alert message</div>
-                  
-                </div>
-                
-              </div>
-              
-              
-              
-              <div class="kss-modifier">
-              
-                <div class="kss-modifier-head">
-                
-                  <div class="kss-modifier-name">
-                  
-                  	.alert--info
-                  
-                  </div>
-                  
-                  <div class="kss-modifier-description">
-                  
-                    <p>Used as an alternative to the default styles.</p>
-
-                    
-                  </div>
-                  
-                </div>
-                
-                <div class="kss-modifier-example">
-                
-                  <div class="alert alert--info">This is an alert message</div>
-                  
-                </div>
-                
-              </div>
-              
-              
-              
-              <div class="kss-modifier">
-              
-                <div class="kss-modifier-head">
-                
-                  <div class="kss-modifier-name">
-                  
-                  	.alert--success
-                  
-                  </div>
-                  
-                  <div class="kss-modifier-description">
-                  
-                    <p>Indicates a successful or positive action.</p>
-
-                    
-                  </div>
-                  
-                </div>
-                
-                <div class="kss-modifier-example">
-                
-                  <div class="alert alert--success">This is an alert message</div>
-                  
-                </div>
-                
-              </div>
-              
-              
-              
-              <div class="kss-modifier">
-              
-                <div class="kss-modifier-head">
-                
-                  <div class="kss-modifier-name">
-                  
-                  	.alert--warning
-                  
-                  </div>
-                  
-                  <div class="kss-modifier-description">
-                  
-                    <p>Indicates caution should be taken with this action.</p>
-
-                    
-                  </div>
-                  
-                </div>
-                
-                <div class="kss-modifier-example">
-                
-                  <div class="alert alert--warning">This is an alert message</div>
-                  
-                </div>
-                
-              </div>
-              
-              
-              
-              <div class="kss-modifier">
-              
-                <div class="kss-modifier-head">
-                
-                  <div class="kss-modifier-name">
-                  
-                  	.alert--danger
-                  
-                  </div>
-                  
-                  <div class="kss-modifier-description">
-                  
-                    <p>Indicates a dangerous or potentially negative action.</p>
-
-                    
-                  </div>
-                  
-                </div>
-                
-                <div class="kss-modifier-example">
-                
-                  <div class="alert alert--danger">This is an alert message</div>
+                  <div class="panel">
+	<p class="show-for-small-only">This text is shown only on a small screen.</p>
+	<p class="show-for-medium-up">This text is shown on medium screens and up.</p>
+	<p class="show-for-medium-only">This text is shown only on a medium screen.</p>
+	<p class="show-for-large-up">This text is shown on large screens and up.</p>
+	<p class="show-for-large-only">This text is shown only on a large screen.</p> 
+	<p class="show-for-xlarge-up">This text is shown on xlarge screens and up.</p>
+	<p class="show-for-xlarge-only">This text is shown only on an xlarge screen.</p>
+</div>
                   
                 </div>
                 
@@ -584,7 +486,76 @@
               
               <div class="kss-markup">
               
-                <pre><code data-language="html">&lt;div class=&quot;alert {$modifiers}&quot;&gt;This is an alert message&lt;/div&gt;</code></pre>
+                <pre><code data-language="html">&lt;div class=&quot;panel&quot;&gt;
+	&lt;p class=&quot;show-for-small-only&quot;&gt;This text is shown only on a small screen.&lt;/p&gt;
+	&lt;p class=&quot;show-for-medium-up&quot;&gt;This text is shown on medium screens and up.&lt;/p&gt;
+	&lt;p class=&quot;show-for-medium-only&quot;&gt;This text is shown only on a medium screen.&lt;/p&gt;
+	&lt;p class=&quot;show-for-large-up&quot;&gt;This text is shown on large screens and up.&lt;/p&gt;
+	&lt;p class=&quot;show-for-large-only&quot;&gt;This text is shown only on a large screen.&lt;/p&gt; 
+	&lt;p class=&quot;show-for-xlarge-up&quot;&gt;This text is shown on xlarge screens and up.&lt;/p&gt;
+	&lt;p class=&quot;show-for-xlarge-only&quot;&gt;This text is shown only on an xlarge screen.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                
+              </div>
+              
+            </div>
+            
+            
+            
+          </section>
+          
+          
+          
+          <section id="section-20.2" class="kss-section kss-depth-2">
+          
+            <h1 class="kss-title"><span class="kss-ref">20.2</span> Hide by Screen Size</h1>
+            
+            
+            
+            
+            
+            <div class="kss-description">
+            
+              <p>This example shows the opposite: It uses the hide visibility classes to state which elements should disappear based on your device&apos;s screen size or orientation. Users will see elements on every browser except those that meet these conditions.</p>
+
+              
+            </div>
+            
+            
+            
+            <div class="kss-modifier-block">
+            
+              <div class="kss-modifier kss-modifier-original">
+              
+                <div class="kss-modifier-example">
+                
+                  <div class="panel">
+	<p class="hide-for-small-only">You are <em>not</em> on a small screen.</p>
+	<p class="hide-for-medium-up">You are <em>not</em> on a medium, large, xlarge screen.</p>
+	<p class="hide-for-medium-only">You are <em>not</em> on a medium screen.</p>
+	<p class="hide-for-large-up">You are <em>not</em> on a large, xlarge screen.</p>
+	<p class="hide-for-large-only">You are <em>not</em> on a large screen.</p> 
+	<p class="hide-for-xlarge-up">You are <em>not</em> on an xlarge screen.</p>
+	<p class="hide-for-xlarge-only">You are <em>not</em> on an xlarge screen.</p>
+</div>
+                  
+                </div>
+                
+              </div>
+              
+              
+              
+              <div class="kss-markup">
+              
+                <pre><code data-language="html">&lt;div class=&quot;panel&quot;&gt;
+	&lt;p class=&quot;hide-for-small-only&quot;&gt;You are &lt;em&gt;not&lt;/em&gt; on a small screen.&lt;/p&gt;
+	&lt;p class=&quot;hide-for-medium-up&quot;&gt;You are &lt;em&gt;not&lt;/em&gt; on a medium, large, xlarge screen.&lt;/p&gt;
+	&lt;p class=&quot;hide-for-medium-only&quot;&gt;You are &lt;em&gt;not&lt;/em&gt; on a medium screen.&lt;/p&gt;
+	&lt;p class=&quot;hide-for-large-up&quot;&gt;You are &lt;em&gt;not&lt;/em&gt; on a large, xlarge screen.&lt;/p&gt;
+	&lt;p class=&quot;hide-for-large-only&quot;&gt;You are &lt;em&gt;not&lt;/em&gt; on a large screen.&lt;/p&gt; 
+	&lt;p class=&quot;hide-for-xlarge-up&quot;&gt;You are &lt;em&gt;not&lt;/em&gt; on an xlarge screen.&lt;/p&gt;
+	&lt;p class=&quot;hide-for-xlarge-only&quot;&gt;You are &lt;em&gt;not&lt;/em&gt; on an xlarge screen.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
                 
               </div>
               
