@@ -1,4 +1,22 @@
-/* Default ---------------------- */
+// Standard Life colours
+//
+//These are the only colours we use for Standard Life communications.
+// Standard Life Branding Basics colours with hexidecimal value, css class names for colour and background colour along with sass value.
+//
+// Markup:
+//<div class="row text--center">    
+//  <div class="col medium_2 bg-dark-blue white soft">                          
+//        Dark Blue
+//        <br />
+//         hex: #0A2F73
+//        <br />
+//       css:  .dark-blue, .bg-dark-blue
+//        <br />
+//       sass: $dark-blue
+//  </div>
+//</div>
+//
+// Styleguide 5.1
 
 .black {
 	color:#000;
